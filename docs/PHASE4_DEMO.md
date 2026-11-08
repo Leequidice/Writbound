@@ -27,12 +27,14 @@ Open [Writbound locally](http://127.0.0.1:5173). The Vite proxy targets the loop
 1. In Jobs, create a job from the published demo CSV or upload your own CSV and choose rules.
 2. In Worker, run Ollama, download the artifact and independently verify it.
 3. In Challenges, verify the published defective fixture and inspect the reproducible row mismatch.
-4. In Jobs or Treasury, select the workflow and refresh finalized state. To inspect the existing expired job, select job 0 cleanup.
-5. Prepare an unsigned intent. Its status stays Prepared until an external hash is recorded. Reconcile checks the action and finalized receipts against the saved intent.
+4. In Treasury, open the read-only views for jobs 1 and 2. Their live states and published receipt references are shown separately from the local rehearsal.
+5. Open the explorer links for the original transfers and callbacks.
 
-Run `node scripts/smoke-phase4.mjs` with both local services and Ollama running. It uses the dashboard proxy, checks live NEAR configuration and job 0, runs a local CSV job, checks both verifier outcomes and records unsigned creation and expiry intents. Use a fresh local job for actual demo creation, since a rehearsal creation intent has a time-limited deadline. The job 0 expiry intent can be reviewed for the optional cleanup. Run `node scripts/phase4-preflight.mjs` after the API build to refresh the approval snapshot.
+Run `node scripts/smoke-phase4.mjs` with both local services and Ollama running. It uses the dashboard proxy, reads finalized jobs 1 and 2, runs a fresh local CSV job, hashes its downloaded artifact and checks both verifier outcomes.
 
-## Live execution after owner approval
+## Historical live execution
+
+The steps below describe the original controlled workflow. Release runners block broadcasting. The [recording script](DEMO_SCRIPT.md) uses the existing finalized jobs.
 
 Use two new local jobs from the published demo CSV. Keep both local IDs. For A, select **Successful settlement**, prepare creation, and sign externally using the exact reviewed intent. After the creation hash reconciles, repeat for acceptance. Run Ollama only after acceptance. Verify the generated artifact locally, then prepare submission. The API recomputes the file hash and compares it to the accepted Phase 3 commitment. Attest and record A's finalized challenge end.
 
@@ -45,7 +47,7 @@ The owner or authorized operator signs through the existing official NEAR CLI an
 | Route | Purpose |
 |---|---|
 | `GET /near/config` | Finalized deployment code hash, version, verifier, storage quote and public role IDs |
-| `GET /near/jobs/:id` | Finalized onchain job details and job 0 cleanup references |
+| `GET /near/jobs/:id` | Finalized onchain job details and published receipt references for jobs 1 and 2 |
 | `GET /near/links/:localId` | Local mapping, finalized job view and recorded intents/receipts |
 | `GET /near/demo` | Published CSV task and labelled defective fixture |
 | `POST /near/prepare` | Accepts only `{scope, mode, method, signer}` and derives the unsigned action server-side |

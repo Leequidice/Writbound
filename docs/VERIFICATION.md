@@ -1,3 +1,7 @@
+## Release freeze verification · November 8, 2026
+
+The clean Windows clone installed, built and ran the credential-free demo. The API, dashboard, Python and Rust suites passed. The demo reproduced the cleaned artifact hash and read the finalized payout/refund through the dashboard proxy. The authored source scan returned zero findings. [Release audit](RELEASE_AUDIT.md)
+
 ## Phase 4 verification · November 8, 2026
 
 All 12 authorized calls finalized. Following the initial HTTP 429 stop and read-only reconciliation of call 4, Directive 004-C authorized settlement at call 5 after the real challenge deadline and the challenged workflow at calls 6–12. Job 1 reached Paid with a 0.01 NEAR worker transfer. Challenge 0 on job 2 was upheld, and job 2 reached Refunded with a 0.01 NEAR customer transfer. Both callbacks finalized successfully. [Onchain execution report](PHASE4_ONCHAIN_REPORT.md)
