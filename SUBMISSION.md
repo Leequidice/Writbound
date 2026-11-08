@@ -50,3 +50,4 @@ Make evidence portable across machines, improve verifier accountability, and exp
 
 - Repository URL — `<PUBLIC_REPOSITORY_URL>`
 - Demo video URL — `<DEMO_VIDEO_URL>`
+- Final commit SHA — `<FINAL_COMMIT_SHA>`
