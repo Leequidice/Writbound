@@ -1,0 +1,44 @@
+{
+  "block_height": 276299843,
+  "block_hash": "4cY2xsSKHEXQXZ3L7LHMCUakJSKySNk4aiwFb5Cj7VWB",
+  "timestamp_ns": "1793856775524390796",
+  "accounts": {
+    "challenger": null,
+    "contract": {
+      "amount": "6978655031387500000000000",
+      "block_hash": "4cY2xsSKHEXQXZ3L7LHMCUakJSKySNk4aiwFb5Cj7VWB",
+      "block_height": 276299843,
+      "code_hash": "11111111111111111111111111111111",
+      "locked": "0",
+      "storage_paid_at": 0,
+      "storage_usage": 182
+    },
+    "customer": {
+      "amount": "1000000000000000000000000",
+      "block_hash": "4cY2xsSKHEXQXZ3L7LHMCUakJSKySNk4aiwFb5Cj7VWB",
+      "block_height": 276299843,
+      "code_hash": "11111111111111111111111111111111",
+      "locked": "0",
+      "storage_paid_at": 0,
+      "storage_usage": 182
+    },
+    "verifier": {
+      "amount": "1000000000000000000000000",
+      "block_hash": "4cY2xsSKHEXQXZ3L7LHMCUakJSKySNk4aiwFb5Cj7VWB",
+      "block_height": 276299843,
+      "code_hash": "11111111111111111111111111111111",
+      "locked": "0",
+      "storage_paid_at": 0,
+      "storage_usage": 182
+    },
+    "worker": {
+      "amount": "1000000000000000000000000",
+      "block_hash": "4cY2xsSKHEXQXZ3L7LHMCUakJSKySNk4aiwFb5Cj7VWB",
+      "block_height": 276299843,
+      "code_hash": "11111111111111111111111111111111",
+      "locked": "0",
+      "storage_paid_at": 0,
+      "storage_usage": 182
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@import 'tailwindcss';
+:root { font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: #e2e8f0; background: #0b1115; }
+button { cursor: pointer; }
+button, select, input:not([type="checkbox"]) { border: 1px solid #475569; border-radius: .5rem; padding: .5rem .7rem; background: #111a20; color: #e2e8f0; }
+button[aria-current="page"] { color: #172005; background: #bef264; border-color: #bef264; }
+button:disabled, select:disabled { cursor: default; opacity: .55; }
+dd { margin-bottom: .5rem; }
+button:focus-visible, a:focus-visible { outline: 2px solid #bef264; outline-offset: 4px; }

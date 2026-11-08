@@ -1,0 +1,295 @@
+{
+  "path": "C:\\Users\\USER\\Downloads\\Hackathons\\WritBound\\contracts\\writbound-escrow\\target\\near\\writbound_escrow.wasm",
+  "bytes": 167353,
+  "sha256": "b0e079d44375cda2baf0f242f5aa405d2c0cf158782b4817b9b0ce2284e30019",
+  "valid": true,
+  "verifiedEntrypoints": 19,
+  "exports": [
+    {
+      "name": "memory",
+      "kind": "memory"
+    },
+    {
+      "name": "accept_job",
+      "kind": "function"
+    },
+    {
+      "name": "attest_verification",
+      "kind": "function"
+    },
+    {
+      "name": "cancel_job",
+      "kind": "function"
+    },
+    {
+      "name": "contract_source_metadata",
+      "kind": "function"
+    },
+    {
+      "name": "create_job",
+      "kind": "function"
+    },
+    {
+      "name": "expire_job",
+      "kind": "function"
+    },
+    {
+      "name": "get_accounting",
+      "kind": "function"
+    },
+    {
+      "name": "get_job",
+      "kind": "function"
+    },
+    {
+      "name": "get_job_count",
+      "kind": "function"
+    },
+    {
+      "name": "get_verifier",
+      "kind": "function"
+    },
+    {
+      "name": "list_jobs",
+      "kind": "function"
+    },
+    {
+      "name": "new",
+      "kind": "function"
+    },
+    {
+      "name": "on_transfer",
+      "kind": "function"
+    },
+    {
+      "name": "open_challenge",
+      "kind": "function"
+    },
+    {
+      "name": "refund_job",
+      "kind": "function"
+    },
+    {
+      "name": "resolve_challenge",
+      "kind": "function"
+    },
+    {
+      "name": "settle_job",
+      "kind": "function"
+    },
+    {
+      "name": "storage_quote",
+      "kind": "function"
+    },
+    {
+      "name": "submit_work",
+      "kind": "function"
+    },
+    {
+      "name": "version",
+      "kind": "function"
+    }
+  ],
+  "imports": [
+    {
+      "module": "env",
+      "name": "value_return",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "read_register",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "promise_batch_action_use_global_contract_by_account_id",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "promise_batch_action_create_account",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "promise_return",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "promise_and",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "register_len",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "storage_read",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "storage_usage",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "storage_write",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "storage_remove",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "account_balance",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "storage_has_key",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "promise_batch_then",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "promise_batch_create",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "promise_result",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "promise_batch_action_stake",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "promise_batch_action_transfer",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "promise_batch_action_delete_key",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "promise_batch_action_function_call",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "promise_batch_action_delete_account",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "promise_batch_action_deploy_contract",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "promise_batch_action_transfer_to_gas_key",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "promise_batch_action_use_global_contract",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "promise_batch_action_function_call_weight",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "promise_batch_action_universal_state_init",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "promise_batch_action_deploy_global_contract",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "promise_batch_action_add_key_with_full_access",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "promise_batch_action_add_gas_key_with_full_access",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "promise_batch_action_add_gas_key_with_function_call",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "promise_batch_action_add_key_with_function_call",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "promise_batch_action_deploy_global_contract_by_account_id",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "input",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "panic_utf8",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "prepaid_gas",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "block_timestamp",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "attached_deposit",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "current_account_id",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "promise_results_count",
+      "kind": "function"
+    },
+    {
+      "module": "env",
+      "name": "predecessor_account_id",
+      "kind": "function"
+    }
+  ]
+}

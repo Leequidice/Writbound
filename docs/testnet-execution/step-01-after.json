@@ -1,0 +1,46 @@
+{
+  "network": "testnet",
+  "rpc": "https://archival-rpc.testnet.fastnear.com/",
+  "block_height": 276296099,
+  "block_hash": "4Ro5spxeVPPUvpogsVrheQ8DH3z6Y2zZe3m9B4bHoekv",
+  "timestamp_ns": "1793854549672216814",
+  "accounts": {
+    "challenger": {
+      "account_id": "7b1828f1acfc0003b06abf0744f9dea35f53ad105f4e14a24b0901de5a99465f",
+      "status": "not activated",
+      "balance": null
+    },
+    "contract": {
+      "account_id": "writbound-escrow-20261105.testnet",
+      "amount": "8992885010462500000000000",
+      "block_hash": "4Ro5spxeVPPUvpogsVrheQ8DH3z6Y2zZe3m9B4bHoekv",
+      "block_height": 276296099,
+      "code_hash": "11111111111111111111111111111111",
+      "locked": "0",
+      "storage_paid_at": 0,
+      "storage_usage": 182
+    },
+    "customer": {
+      "account_id": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+      "status": "not activated",
+      "balance": null
+    },
+    "verifier": {
+      "account_id": "fcdcd131110d9310c74e6c340e114e92bd79044bbe049d275fadd7d6b3867831",
+      "amount": "1000000000000000000000000",
+      "block_hash": "4Ro5spxeVPPUvpogsVrheQ8DH3z6Y2zZe3m9B4bHoekv",
+      "block_height": 276296099,
+      "code_hash": "11111111111111111111111111111111",
+      "locked": "0",
+      "storage_paid_at": 0,
+      "storage_usage": 182
+    },
+    "worker": {
+      "account_id": "75b826f8ba2f37eb9431805f7a19659f0ecd81e7458eeefd42663b9365a67f55",
+      "status": "not activated",
+      "balance": null
+    }
+  },
+  "verifier_key_matches": true,
+  "no_transactions_submitted_by_this_script": true
+}

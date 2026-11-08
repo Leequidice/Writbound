@@ -1,0 +1,354 @@
+{
+  "status": "UNAPPROVED REPLACEMENT-ACCOUNT PROPOSAL; five local signatures pass; no activation or transactions permitted under Directive 002-C",
+  "network": "testnet",
+  "contract_account_id": "writbound-escrow-20261105.testnet",
+  "verifier_account_id": "fcdcd131110d9310c74e6c340e114e92bd79044bbe049d275fadd7d6b3867831",
+  "account_ids": {
+    "challenger": "7b1828f1acfc0003b06abf0744f9dea35f53ad105f4e14a24b0901de5a99465f",
+    "contract": "writbound-escrow-20261105.testnet",
+    "customer": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+    "verifier": "fcdcd131110d9310c74e6c340e114e92bd79044bbe049d275fadd7d6b3867831",
+    "worker": "75b826f8ba2f37eb9431805f7a19659f0ecd81e7458eeefd42663b9365a67f55"
+  },
+  "artifact_sha256": "b0e079d44375cda2baf0f242f5aa405d2c0cf158782b4817b9b0ce2284e30019",
+  "expected_code_hash_base58": "CuTHP5d4SUnkkVjUGn3b8UzBXkS2i8KABabNDrpZhKS8",
+  "initialization": {
+    "method": "new",
+    "args": {
+      "verifier": "fcdcd131110d9310c74e6c340e114e92bd79044bbe049d275fadd7d6b3867831"
+    },
+    "attached_NEAR": "0",
+    "gas_Tgas": 50
+  },
+  "suggested_initial_testnet_balances_NEAR": {
+    "contract": "5 remaining after role funding; preferably 6 with a 10-NEAR faucet source",
+    "verifier": "1",
+    "customer": "1",
+    "worker": "1",
+    "challenger": "1"
+  },
+  "transactions": [
+    {
+      "step": 1,
+      "signer_role": "contract",
+      "signer_account_id": "writbound-escrow-20261105.testnet",
+      "action": "native NEAR Transfer",
+      "recipient": "fcdcd131110d9310c74e6c340e114e92bd79044bbe049d275fadd7d6b3867831",
+      "amount_NEAR": "1",
+      "expected": "activate the supplied implicit account and fund testnet-only gas/deposits",
+      "execute_only_when": "explicit approval, wallet control confirmed and fresh preflight shows recipient inactive/underfunded; approved packet must match actual setup"
+    },
+    {
+      "step": 2,
+      "signer_role": "contract",
+      "signer_account_id": "writbound-escrow-20261105.testnet",
+      "action": "native NEAR Transfer",
+      "recipient": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+      "amount_NEAR": "1",
+      "expected": "activate the supplied implicit account and fund testnet-only gas/deposits",
+      "execute_only_when": "explicit approval, wallet control confirmed and fresh preflight shows recipient inactive/underfunded; approved packet must match actual setup"
+    },
+    {
+      "step": 3,
+      "signer_role": "contract",
+      "signer_account_id": "writbound-escrow-20261105.testnet",
+      "action": "native NEAR Transfer",
+      "recipient": "75b826f8ba2f37eb9431805f7a19659f0ecd81e7458eeefd42663b9365a67f55",
+      "amount_NEAR": "1",
+      "expected": "activate the supplied implicit account and fund testnet-only gas/deposits",
+      "execute_only_when": "explicit approval, wallet control confirmed and fresh preflight shows recipient inactive/underfunded; approved packet must match actual setup"
+    },
+    {
+      "step": 4,
+      "signer_role": "contract",
+      "signer_account_id": "writbound-escrow-20261105.testnet",
+      "action": "native NEAR Transfer",
+      "recipient": "7b1828f1acfc0003b06abf0744f9dea35f53ad105f4e14a24b0901de5a99465f",
+      "amount_NEAR": "1",
+      "expected": "activate the supplied implicit account and fund testnet-only gas/deposits",
+      "execute_only_when": "explicit approval, wallet control confirmed and fresh preflight shows recipient inactive/underfunded; approved packet must match actual setup"
+    },
+    {
+      "step": 5,
+      "signer_role": "contract",
+      "signer_account_id": "writbound-escrow-20261105.testnet",
+      "method": "DeployContract + new",
+      "args": {
+        "verifier": "fcdcd131110d9310c74e6c340e114e92bd79044bbe049d275fadd7d6b3867831"
+      },
+      "attached_yoctoNEAR": "0",
+      "prepaid_Tgas": 50,
+      "expected": "atomic deploy/init; code hash/version/verifier verified"
+    },
+    {
+      "step": 6,
+      "signer_role": "customer",
+      "signer_account_id": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+      "method": "create_job",
+      "args": {
+        "escrow": "10000000000000000000000",
+        "specification_hash": "22ef89f1100657c91dd5c36f583f192538825f6e1a8b3abb3942f3161faff342",
+        "work_deadline": "<final block timestamp + 2h, recomputed immediately before each creation>",
+        "challenge_duration": "3600000000000"
+      },
+      "attached_yoctoNEAR": "<10000000000000000000000 + live storage_quote()>",
+      "prepaid_Tgas": 100,
+      "expected": "Open; capture H from actual return value"
+    },
+    {
+      "step": 7,
+      "signer_role": "worker",
+      "signer_account_id": "75b826f8ba2f37eb9431805f7a19659f0ecd81e7458eeefd42663b9365a67f55",
+      "method": "accept_job",
+      "args": {
+        "job_id": "<H>"
+      },
+      "attached_yoctoNEAR": "0",
+      "prepaid_Tgas": 100,
+      "expected": "Accepted"
+    },
+    {
+      "step": 8,
+      "signer_role": "worker",
+      "signer_account_id": "75b826f8ba2f37eb9431805f7a19659f0ecd81e7458eeefd42663b9365a67f55",
+      "method": "submit_work",
+      "args": {
+        "job_id": "<H>",
+        "artifact_hash": "1fb396b05e089f3aa1403f9f57598dba78fd89e8996548aa23b1c12350988fa0",
+        "metadata": null
+      },
+      "attached_yoctoNEAR": "0",
+      "prepaid_Tgas": 100,
+      "expected": "Submitted"
+    },
+    {
+      "step": 9,
+      "signer_role": "verifier",
+      "signer_account_id": "fcdcd131110d9310c74e6c340e114e92bd79044bbe049d275fadd7d6b3867831",
+      "method": "attest_verification",
+      "args": {
+        "job_id": "<H>",
+        "passed": true,
+        "evidence_hash": "<SHA256 of bound happy report; full checks pass>"
+      },
+      "attached_yoctoNEAR": "0",
+      "prepaid_Tgas": 100,
+      "expected": "Verified; capture H challenge_end"
+    },
+    {
+      "step": 10,
+      "signer_role": "customer",
+      "signer_account_id": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+      "method": "settle_job",
+      "args": {
+        "job_id": "<H>"
+      },
+      "attached_yoctoNEAR": "0",
+      "prepaid_Tgas": 150,
+      "expected": "Expected failure: challenge window is still open",
+      "execute_only_when": "chain timestamp < H challenge_end"
+    },
+    {
+      "step": 11,
+      "signer_role": "customer",
+      "signer_account_id": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+      "method": "create_job",
+      "args": {
+        "escrow": "10000000000000000000000",
+        "specification_hash": "22ef89f1100657c91dd5c36f583f192538825f6e1a8b3abb3942f3161faff342",
+        "work_deadline": "<final block timestamp + 2h, recomputed immediately before each creation>",
+        "challenge_duration": "3600000000000"
+      },
+      "attached_yoctoNEAR": "<10000000000000000000000 + live storage_quote()>",
+      "prepaid_Tgas": 100,
+      "expected": "Open; capture B from actual return value"
+    },
+    {
+      "step": 12,
+      "signer_role": "worker",
+      "signer_account_id": "75b826f8ba2f37eb9431805f7a19659f0ecd81e7458eeefd42663b9365a67f55",
+      "method": "accept_job",
+      "args": {
+        "job_id": "<B>"
+      },
+      "attached_yoctoNEAR": "0",
+      "prepaid_Tgas": 100,
+      "expected": "Accepted"
+    },
+    {
+      "step": 13,
+      "signer_role": "worker",
+      "signer_account_id": "75b826f8ba2f37eb9431805f7a19659f0ecd81e7458eeefd42663b9365a67f55",
+      "method": "submit_work",
+      "args": {
+        "job_id": "<B>",
+        "artifact_hash": "b9e5531e0e79d162287f11dd710df226b9d1c32f87a8ccd744a4e1e020e42a9a",
+        "metadata": null
+      },
+      "attached_yoctoNEAR": "0",
+      "prepaid_Tgas": 100,
+      "expected": "Submitted; full fixture checks actually fail"
+    },
+    {
+      "step": 14,
+      "signer_role": "verifier",
+      "signer_account_id": "fcdcd131110d9310c74e6c340e114e92bd79044bbe049d275fadd7d6b3867831",
+      "method": "attest_verification",
+      "args": {
+        "job_id": "<B>",
+        "passed": true,
+        "evidence_hash": "<SHA256 of explicitly labelled seeded false-positive report>"
+      },
+      "attached_yoctoNEAR": "0",
+      "prepaid_Tgas": 100,
+      "expected": "Verified; controlled faulty-verifier test, not a genuine verification success"
+    },
+    {
+      "step": 15,
+      "signer_role": "challenger",
+      "signer_account_id": "7b1828f1acfc0003b06abf0744f9dea35f53ad105f4e14a24b0901de5a99465f",
+      "method": "open_challenge",
+      "args": {
+        "job_id": "<B>",
+        "evidence_hash": "<SHA256 of bound reproduction report showing missing 002,Bob>"
+      },
+      "attached_yoctoNEAR": "0",
+      "prepaid_Tgas": 100,
+      "expected": "Pending challenge; capture challenge ID and resolution deadline"
+    },
+    {
+      "step": 16,
+      "signer_role": "customer",
+      "signer_account_id": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+      "method": "settle_job",
+      "args": {
+        "job_id": "<H>"
+      },
+      "attached_yoctoNEAR": "0",
+      "prepaid_Tgas": 150,
+      "expected": "PayoutPending -> native transfer 0.01 -> callback -> Paid",
+      "execute_only_when": "chain timestamp >= max(H challenge_end, B challenge_end), but before B resolution_deadline"
+    },
+    {
+      "step": 17,
+      "signer_role": "customer",
+      "signer_account_id": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+      "method": "settle_job",
+      "args": {
+        "job_id": "<H>"
+      },
+      "attached_yoctoNEAR": "0",
+      "prepaid_Tgas": 150,
+      "expected": "Expected failure: job is not payable; no additional transfer"
+    },
+    {
+      "step": 18,
+      "signer_role": "customer",
+      "signer_account_id": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+      "method": "refund_job",
+      "args": {
+        "job_id": "<H>"
+      },
+      "attached_yoctoNEAR": "0",
+      "prepaid_Tgas": 150,
+      "expected": "Expected failure: job is not refundable; no additional transfer"
+    },
+    {
+      "step": 19,
+      "signer_role": "customer",
+      "signer_account_id": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+      "method": "settle_job",
+      "args": {
+        "job_id": "<B>"
+      },
+      "attached_yoctoNEAR": "0",
+      "prepaid_Tgas": 150,
+      "expected": "Expected failure: Unresolved challenge (window already expired)",
+      "execute_only_when": "chain timestamp >= max(H challenge_end, B challenge_end), but before B resolution_deadline"
+    },
+    {
+      "step": 20,
+      "signer_role": "verifier",
+      "signer_account_id": "fcdcd131110d9310c74e6c340e114e92bd79044bbe049d275fadd7d6b3867831",
+      "method": "resolve_challenge",
+      "args": {
+        "job_id": "<B>",
+        "challenge_id": "<actual returned challenge ID>",
+        "upheld": true,
+        "allow_correction": false,
+        "resolution_hash": "<SHA256 of bound verifier reproduction/resolution report>"
+      },
+      "attached_yoctoNEAR": "0",
+      "prepaid_Tgas": 100,
+      "expected": "Refundable; no payout",
+      "execute_only_when": "before B resolution_deadline"
+    },
+    {
+      "step": 21,
+      "signer_role": "customer",
+      "signer_account_id": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+      "method": "refund_job",
+      "args": {
+        "job_id": "<B>"
+      },
+      "attached_yoctoNEAR": "0",
+      "prepaid_Tgas": 150,
+      "expected": "RefundPending -> native transfer 0.01 -> callback -> Refunded"
+    },
+    {
+      "step": 22,
+      "signer_role": "customer",
+      "signer_account_id": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+      "method": "refund_job",
+      "args": {
+        "job_id": "<B>"
+      },
+      "attached_yoctoNEAR": "0",
+      "prepaid_Tgas": 150,
+      "expected": "Expected failure: job is not refundable; no additional transfer"
+    },
+    {
+      "step": 23,
+      "signer_role": "customer",
+      "signer_account_id": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+      "method": "settle_job",
+      "args": {
+        "job_id": "<B>"
+      },
+      "attached_yoctoNEAR": "0",
+      "prepaid_Tgas": 150,
+      "expected": "Expected failure: job is not payable; no additional transfer"
+    }
+  ],
+  "expected_submitted_transactions": 23,
+  "expected_rejected_transactions": [
+    10,
+    17,
+    18,
+    19,
+    22,
+    23
+  ],
+  "prepaid_function_gas_Tgas": 2250,
+  "additional_transactions": "User-driven faucet account creation is not included. If role accounts are independently faucet-funded before approval, remove the four activation transfers and re-present a 19-transaction packet. No unapproved topups/retries/extra transactions.",
+  "dynamic_values": "Only actual returned IDs, current chain deadlines, live storage quote, and hashes of actual job-bound reports may replace placeholders. No fabricated values or arbitrary changes.",
+  "provided_implicit_contract_id_not_used": "dd961dc1ab7b33e9be13e170369bbd453d7e610d94abd7d9e385585245680968",
+  "recommended_faucet_source_starting_balance_NEAR": "10 (planning target, not a claim of credit)",
+  "fee_estimate_snapshot": {
+    "gas_price_yocto_per_gas": "100000000",
+    "planned_function_prepaid_NEAR": "0.225",
+    "nineteen_call_300_Tgas_envelope_NEAR": "0.57",
+    "four_implicit_creation_charge_estimate_NEAR": "0.028",
+    "extra_fee_headroom_target_NEAR": "1",
+    "source": "live testnet preflight plus official current implicit-account creation guidance; not actual charges"
+  },
+  "latest_account_snapshot": {
+    "contract": "same contract retained; no RPC/balance refresh in this offline recovery assignment",
+    "replacement_roles": "local keypairs only; no onchain account creation, activation or funding performed",
+    "local_signing_all_five_verified": true,
+    "proof": "testnet-replacement-signing-readiness.json",
+    "approval": "not granted for changed identities"
+  },
+  "authorization_conditions": "Original conditional approval does not authorize these changed identities. Fresh product-owner approval plus fresh budget/hash/network/permission checks required before activation, funding or deployment.",
+  "execution_report": "No execution: offline recovery only"
+}

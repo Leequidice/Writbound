@@ -1,0 +1,176 @@
+Note: `near` CLI configuration is stored in "C:\\Users\\USER\\AppData\\Roaming\\near-cli\\config.toml"
+• Collecting cargo project metadata...
+• done
+
+• Checking rustc version...
+• done
+INFO: contract's near-sdk targets protocol version 88; rustc 1.99.1 accepted (bulk-memory opcodes supported by nearcore VM)
+
+• Checking the host environment...
+• done
+
+• Generating ABI
+ │  Downloading crates ...
+ │   Downloaded near-abi v0.4.5
+ │    Compiling proc-macro2 v1.0.107
+ │    Compiling unicode-ident v1.0.27
+ │    Compiling quote v1.0.47
+ │    Compiling typenum v1.20.1
+ │    Compiling hashbrown v0.17.1
+ │    Compiling equivalent v1.0.3
+ │    Compiling zmij v1.0.23
+ │    Compiling serde_core v1.0.229
+ │    Compiling itoa v1.0.18
+ │    Compiling ident_case v1.0.1
+ │    Compiling memchr v2.8.3
+ │    Compiling winnow v1.0.4
+ │    Compiling serde v1.0.229
+ │    Compiling indexmap v2.14.2
+ │    Compiling hybrid-array v0.4.15
+ │    Compiling toml_datetime v1.1.2+spec-1.1.0
+ │    Compiling serde_json v1.0.154
+ │    Compiling schemars v0.8.22
+ │    Compiling toml_parser v1.1.5+spec-1.1.0
+ │    Compiling syn v3.0.9
+ │    Compiling syn v2.0.119
+ │    Compiling foldhash v0.2.0
+ │    Compiling cfg_aliases v0.2.2
+ │    Compiling borsh v1.8.1
+ │    Compiling block-buffer v0.12.1
+ │    Compiling toml_edit v0.25.18+spec-1.1.0
+ │    Compiling crypto-common v0.2.2
+ │    Compiling const-oid v0.10.2
+ │    Compiling once_cell v1.21.4
+ │    Compiling version_check v0.9.5
+ │    Compiling dyn-clone v1.0.20
+ │    Compiling proc-macro-crate v3.5.0
+ │    Compiling generic-array v0.14.9
+ │    Compiling digest v0.11.3
+ │    Compiling strsim v0.11.1
+ │    Compiling cfg-if v1.0.5
+ │    Compiling keccak v0.2.2
+ │    Compiling sha3 v0.11.0
+ │    Compiling fnv v1.0.7
+ │    Compiling rustversion v1.0.23
+ │    Compiling bs58 v0.5.1
+ │    Compiling block-buffer v0.10.4
+ │    Compiling crypto-common v0.1.6
+ │    Compiling base64 v0.23.1
+ │    Compiling hex v0.4.3
+ │    Compiling serde_derive_internals v0.29.1
+ │    Compiling darling_core v0.20.11
+ │    Compiling darling_core v0.24.1
+ │    Compiling digest v0.10.7
+ │    Compiling heck v0.5.0
+ │    Compiling near-crypto-hash v0.2.0
+ │    Compiling near-sdk-macros v5.30.0
+ │    Compiling cpufeatures v0.3.1
+ │    Compiling base64 v0.22.1
+ │    Compiling sha2 v0.11.1
+ │    Compiling ripemd v0.1.3
+ │    Compiling near-digest v0.1.4
+ │    Compiling digest-io v0.1.0
+ │    Compiling semver v1.0.28
+ │    Compiling strum v0.26.3
+ │    Compiling schemars_derive v0.8.22
+ │    Compiling strum_macros v0.26.4
+ │    Compiling serde_derive v1.0.229
+ │    Compiling borsh-derive v1.8.1
+ │    Compiling cfg_eval v0.1.2
+ │    Compiling Inflector v0.11.4
+ │    Compiling near-sdk-env v0.1.8
+ │    Compiling darling_macro v0.20.11
+ │    Compiling near-sys v0.4.0
+ │    Compiling hex-literal v1.1.0
+ │    Compiling darling v0.20.11
+ │    Compiling darling_macro v0.24.1
+ │    Compiling darling v0.24.1
+ │    Compiling serde_with_macros v3.24.0
+ │    Compiling near-gas v0.3.7
+ │    Compiling near-account-id v3.0.0
+ │    Compiling near-token v0.3.6
+ │    Compiling serde_with v3.24.0
+ │    Compiling near-abi v0.4.5
+ │    Compiling near-sdk-core v4.4.1
+ │    Compiling near-global-contracts v0.3.2
+ │    Compiling near-sdk v5.30.0
+ │    Compiling writbound-escrow v0.1.0 (C:\Users\USER\Downloads\Hackathons\WritBound\contracts\writbound-escrow)
+ │ error: linking with `link.exe` failed: exit code: 1120
+ │   |
+ │   = note: "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe" "/DEF:C:\\Users\\USER\\Downloads\\Hackathons\\WritBound\\contracts\\writbound-escrow\\target\\cargo-near-abi\\debug\\deps\\rustcAY7F2m\\lib.def" "/NOLOGO" "C:\\Users\\USER\\Downloads\\Hackathons\\WritBound\\contracts\\writbound-escrow\\target\\cargo-near-abi\\debug\\deps\\rustcAY7F2m\\symbols.o" "<51 object files omitted>" "C:\\Users\\USER\\Downloads\\Hackathons\\WritBound\\contracts\\writbound-escrow\\target\\cargo-near-abi\\debug\\deps/{libnear_sdk-f242911b8911d0cc,libhex_literal-3b4f9aa9da132fbc,libnear_global_contracts-5301dd61640baa47,libnear_digest-c1edfb4cc65bf8a5,libdigest_io-1ed19237fb66add9,libnear_abi-f2031c4e9338c8d7,libsemver-ac24272a610302fa,libnear_sdk_core-acdf166077f0004b,libserde_with-d2a9a1f282264f88,libhex-8bf47bcc3a74f13b,libbase64-29e1b65a156e9f13,libnear_token-0ceeddca3b624af4,libnear_gas-3ac7ce20e5da6009,libnear_account_id-696381628f497f72,libschemars-5a554e0613b27256,libdyn_clone-2c29fc3e4d1d5511,libserde_json-98b0eb9c825ede25,libmemchr-d2cf63393f7ea6be,libitoa-86a271a6b88204a9,libfoldhash-c7d890bebb903d4f,libzmij-a3b9617574dd1eb6,libindexmap-acd108fb83bd1571,libequivalent-1aa815c5f553ff8c,libhashbrown-79eb504faca85682,libserde-7a2c219fec2a3a91,libserde_core-ed3b6d626884d93c,libbase64-eaed6f38078d1660,libnear_crypto_hash-91bba7094da76afd,libbs58-8edba6b0be0cd259,libnear_sdk_env-0e7b1cb1709c95e8,libripemd-e2d02a0fd733b258,libdigest-1afd7c67b4544d2d,libblock_buffer-98944896235c6c3c,libcrypto_common-15c06c161081f659,libgeneric_array-00b83b785d3bd6ad,libsha3-a941b18c7d719c2d,libkeccak-e316923fca9a1d38,libsha2-00407f20b6cebcac,libcpufeatures-c6655a16b8e28ab0,libcfg_if-5107acd4dc125c4d,libdigest-85aa75489fbe407e,libconst_oid-90509c307109edb2,libcrypto_common-70bb99fc54e6d780,libblock_buffer-43b98084dd21453f,libhybrid_array-6be42e71b637336d,libtypenum-8122757789cc16df,libnear_sys-bbf0f9a4f4f0595b,libonce_cell-e17727aaa4bda085,libborsh-445bf80293a9f19a}.rlib" "<sysroot>\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib/{libstd-*,libpanic_unwind-*,libcfg_if-*,libwindows_link-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libunwind-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "kernel32.lib" "kernel32.lib" "kernel32.lib" "ntdll.lib" "userenv.lib" "ws2_32.lib" "dbghelp.lib" "/defaultlib:msvcrt" "/NXCOMPAT" "/OUT:C:\\Users\\USER\\Downloads\\Hackathons\\WritBound\\contracts\\writbound-escrow\\target\\cargo-near-abi\\debug\\deps\\writbound_escrow.dll" "/OPT:REF,NOICF" "/DLL" "/IMPLIB:C:\\Users\\USER\\Downloads\\Hackathons\\WritBound\\contracts\\writbound-escrow\\target\\cargo-near-abi\\debug\\deps\\writbound_escrow.dll.lib" "/DEBUG" "/PDBALTPATH:%_PDB%" "/NATVIS:<sysroot>\\lib\\rustlib\\etc\\intrinsic.natvis" "/NATVIS:<sysroot>\\lib\\rustlib\\etc\\liballoc.natvis" "/NATVIS:<sysroot>\\lib\\rustlib\\etc\\libcore.natvis" "/NATVIS:<sysroot>\\lib\\rustlib\\etc\\libstd.natvis"
+ │   = note: some arguments are omitted. use `--verbose` to show all linker arguments
+ │   = note:    Creating library C:\Users\USER\Downloads\Hackathons\WritBound\contracts\writbound-escrow\target\cargo-near-abi\debug\deps\writbound_escrow.dll.lib and object C:\Users\USER\Downloads\Hackathons\WritBound\contracts\writbound-escrow\target\cargo-near-abi\debug\deps\writbound_escrow.dll.exp
+ │           writbound_escrow.bzi0zd2qvznc6b952i6ug36ef.1h4hlfm.rcgu.o : error LNK2019: unresolved external symbol value_return referenced in function _RINvNtNtCs2xEmh69GXcO_8near_sdk11environment3env12value_returnRShECs9oUId391sJD_16writbound_escrow
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.1.rcgu.o) : error LNK2019: unresolved external symbol bls12381_g1_multiexp referenced in function _RNvNtCs2xEmh69GXcO_8near_sdk8bls1238111g1_multiexp
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.1.rcgu.o) : error LNK2019: unresolved external symbol bls12381_g2_multiexp referenced in function _RNvNtCs2xEmh69GXcO_8near_sdk8bls1238111g2_multiexp
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.1.rcgu.o) : error LNK2019: unresolved external symbol bls12381_map_fp_to_g1 referenced in function _RNvNtCs2xEmh69GXcO_8near_sdk8bls1238112map_fp_to_g1
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.1.rcgu.o) : error LNK2019: unresolved external symbol bls12381_map_fp2_to_g2 referenced in function _RNvNtCs2xEmh69GXcO_8near_sdk8bls1238113map_fp2_to_g2
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.1.rcgu.o) : error LNK2019: unresolved external symbol bls12381_p1_decompress referenced in function _RNvNtCs2xEmh69GXcO_8near_sdk8bls1238113p1_decompress
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.1.rcgu.o) : error LNK2019: unresolved external symbol bls12381_p2_decompress referenced in function _RNvNtCs2xEmh69GXcO_8near_sdk8bls1238113p2_decompress
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.1.rcgu.o) : error LNK2019: unresolved external symbol bls12381_pairing_check referenced in function _RNvNtCs2xEmh69GXcO_8near_sdk8bls1238113pairing_check
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.1.rcgu.o) : error LNK2019: unresolved external symbol bls12381_p1_sum referenced in function _RNvNtCs2xEmh69GXcO_8near_sdk8bls123816p1_sum
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.1.rcgu.o) : error LNK2019: unresolved external symbol bls12381_p2_sum referenced in function _RNvNtCs2xEmh69GXcO_8near_sdk8bls123816p2_sum
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol read_register referenced in function _RINvNtNtCs2xEmh69GXcO_8near_sdk11environment3env19read_register_fixedKj20_EB6_
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol promise_batch_action_use_global_contract_by_account_id referenced in function _RINvNtNtCs2xEmh69GXcO_8near_sdk11environment3env54promise_batch_action_use_global_contract_by_account_idNtNtCsktYGfOmTz3J_15near_account_id10account_id9AccountIdEB6_
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol prepaid_gas referenced in function _RNCNvNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env11prepaid_gas6CACHED0B9_
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol epoch_height referenced in function _RNCNvNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env12epoch_height6CACHED0B9_
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol block_timestamp referenced in function _RNCNvNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env15block_timestamp6CACHED0B9_
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol attached_deposit referenced in function _RNCNvNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env16attached_deposit6CACHED0B9_
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol random_seed referenced in function _RNCNvNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env17random_seed_array6CACHED0B9_
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol signer_account_id referenced in function _RNCNvNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env17signer_account_id6CACHED0B9_
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol signer_account_pk referenced in function _RNCNvNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env17signer_account_pk6CACHED0B9_
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol current_account_id referenced in function _RNCNvNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env18current_account_id6CACHED0B9_
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol promise_results_count referenced in function _RNCNvNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env21promise_results_count6CACHED0B9_
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol predecessor_account_id referenced in function _RNCNvNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env22predecessor_account_id6CACHED0B9_
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol chain_id referenced in function _RNCNvNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env8chain_id6CACHED0B9_
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol block_index referenced in function _RNvCs36hMSf9vHaD_8near_sys12block_heightCs2xEmh69GXcO_8near_sdk
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol p256_verify referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env11p256_verify
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol promise_and referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env11promise_and
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol register_len referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env12register_len
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol storage_read referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env12storage_read
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol storage_usage referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env13storage_usage
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol storage_write referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env13storage_write
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol promise_return referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env14promise_return
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol storage_remove referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env14storage_remove
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol account_balance referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env15account_balance
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol storage_has_key referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env15storage_has_key
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol validator_stake referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env15validator_stake
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol promise_batch_then referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env18promise_batch_then
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol promise_batch_create referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env20promise_batch_create
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol validator_total_stake referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env21validator_total_stake
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol account_locked_balance referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env22account_locked_balance
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol promise_result referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env23promise_result_internal
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol promise_batch_action_stake referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env26promise_batch_action_stake
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol promise_batch_action_transfer referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env29promise_batch_action_transfer
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol promise_batch_action_delete_key referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env31promise_batch_action_delete_key
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol promise_batch_action_function_call referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env34promise_batch_action_function_call
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol universal_state_init_to_account_id referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env34universal_state_init_to_account_id
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol promise_batch_action_create_account referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env35promise_batch_action_create_account
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol promise_batch_action_delete_account referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env35promise_batch_action_delete_account
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol promise_batch_action_deploy_contract referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env36promise_batch_action_deploy_contract
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol log_utf8 referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env3log
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol promise_batch_action_transfer_to_gas_key referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env40promise_batch_action_transfer_to_gas_key
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol promise_batch_action_use_global_contract referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env40promise_batch_action_use_global_contract
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol promise_batch_action_function_call_weight referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env41promise_batch_action_function_call_weight
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol promise_batch_action_universal_state_init referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env41promise_batch_action_universal_state_init
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol promise_batch_action_deploy_global_contract referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env43promise_batch_action_deploy_global_contract
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol promise_batch_action_add_key_with_full_access referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env45promise_batch_action_add_key_with_full_access
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol promise_batch_action_add_gas_key_with_full_access referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env49promise_batch_action_add_gas_key_with_full_access
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol promise_batch_action_add_gas_key_with_function_call referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env51promise_batch_action_add_gas_key_with_function_call
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol promise_batch_action_add_key_with_function_call referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env57promise_batch_action_add_key_allowance_with_function_call
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol promise_batch_action_deploy_global_contract_by_account_id referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env57promise_batch_action_deploy_global_contract_by_account_id
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol input referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env5input
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol panic_utf8 referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env5panic
+ │           libnear_sdk-f242911b8911d0cc.rlib(near_sdk-f242911b8911d0cc.near_sdk.1d9df82595ad7cc8-cgu.0.rcgu.o) : error LNK2019: unresolved external symbol used_gas referenced in function _RNvNtNtCs2xEmh69GXcO_8near_sdk11environment3env8used_gas
+ │           C:\Users\USER\Downloads\Hackathons\WritBound\contracts\writbound-escrow\target\cargo-near-abi\debug\deps\writbound_escrow.dll : fatal error LNK1120: 62 unresolved externals
+ │           
+ │ 
+ │ error: could not compile `writbound-escrow` (lib) due to 1 previous error
+Here is the console command if you ever need to re-run it again:
+cargo near build non-reproducible-wasm --locked
+
+Error: 
+   0: `"C:\\Users\\USER\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\cargo.exe" "build" "--message-format=json-render-diagnostics" "--features" "near-sdk/__abi-generate" "--locked" "--color" "never"` failed with exit code: Some(101)
+
+Location:
+   cargo-near-build\src\cargo_native\compile.rs:216

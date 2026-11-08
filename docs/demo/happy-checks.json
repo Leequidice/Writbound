@@ -1,0 +1,15 @@
+{
+  "artifact_hash": "1fb396b05e089f3aa1403f9f57598dba78fd89e8996548aa23b1c12350988fa0",
+  "baseline_only_passed": true,
+  "checks": {
+    "all_distinct_input_rows_retained_in_order": true,
+    "header_matches_input": true,
+    "no_exact_duplicate_output_rows": true
+  },
+  "passed": true,
+  "reproduce": "python scripts/prepare-demo-evidence.py",
+  "schema_version": 1,
+  "scope": "Local fixture checks only; no chain job ID assigned, no transaction executed.",
+  "specification_hash": "22ef89f1100657c91dd5c36f583f192538825f6e1a8b3abb3942f3161faff342",
+  "suite_version": "writbound-demo-csv-v1"
+}

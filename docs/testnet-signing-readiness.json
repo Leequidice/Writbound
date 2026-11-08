@@ -1,0 +1,39 @@
+{
+  "all_five_verified": false,
+  "network": "testnet",
+  "onchain_transactions_submitted": 0,
+  "private_material_printed": false,
+  "results": {
+    "challenger": {
+      "account_id": "30314a0c731301037ddce5c1716f14a977bf69136345cf11b835880071e768f7",
+      "public_key": "ed25519:4F8AM8imz6p9cw64t8Jt9YVw1WNKBzZsLwos71YKADiN",
+      "reason": "No accessible credential at official NEAR testnet keychain entry",
+      "verified": false
+    },
+    "contract": {
+      "account_id": "writbound-escrow-20261105.testnet",
+      "method": "local OS keychain, in-memory Ed25519 sign/verify of domain-separated offchain challenge",
+      "public_key": "ed25519:EfjHfxMYbW565rUaiAextpLMqEDhjYsLHDk3j37eSMn7",
+      "reason": "signature verified",
+      "verified": true
+    },
+    "customer": {
+      "account_id": "2abfc6c4576095958e51f373b77b30c03be80058a9b1fa60d701e153ee01ff1a",
+      "public_key": "ed25519:3ssjRHJxhvE5cGZmFUQRQHaXCK4SGXizx9utSjXpDBEq",
+      "reason": "No accessible credential at official NEAR testnet keychain entry",
+      "verified": false
+    },
+    "verifier": {
+      "account_id": "1a23e55459c7e0503df815a0aff749c9834a0c315552709cfaadd94630083929",
+      "public_key": "ed25519:2m3M6uzSeEgq9pz4HCPU4Ks4fa76LMfbiC56v5iqdR1A",
+      "reason": "No accessible credential at official NEAR testnet keychain entry",
+      "verified": false
+    },
+    "worker": {
+      "account_id": "b265140f50d716b20d98d94ff2a4a9336c42cc52281fa124b952b16c4818bc60",
+      "public_key": "ed25519:D1NxwHp35cHXReW5xASyJvAZpP7Tyqg79543gnRAapKy",
+      "reason": "No accessible credential at official NEAR testnet keychain entry",
+      "verified": false
+    }
+  }
+}

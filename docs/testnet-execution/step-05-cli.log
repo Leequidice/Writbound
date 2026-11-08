@@ -1,0 +1,41 @@
+├  Unsigned transaction:
+│    signer_id:    writbound-escrow-20261105.testnet
+│    receiver_id:  writbound-escrow-20261105.testnet
+│    actions:
+│       -- deploy code <CuTHP5d4SUnkkVjUGn3b8UzBXkS2i8KABabNDrpZhKS8> to a account <writbound-escrow-20261105.testnet>
+│       -- function call:      
+│                       method name:  new
+│                       args:         {
+│                                       "verifier": "fcdcd131110d9310c74e6c340e114e92bd79044bbe049d275fadd7d6b3867831"
+│                                     }
+│                       gas:          50.0 Tgas
+│                       deposit:      0 NEAR
+│     
+├  Your transaction was signed successfully.
+│    Public key: ed25519:EfjHfxMYbW565rUaiAextpLMqEDhjYsLHDk3j37eSMn7
+│    Signature:  ed25519:5xZmWnKUNDpTb9n8p5LfEJdtXGMiCN94vJFnyshAAFzzdAQFw7yCLtwQPjFcAtCHsF9DPNqVzjDkZNH8D8XBhDky
+│     
+├  Transaction Execution Info:
+│    Gas burned: 1.7 Tgas
+│    Transaction fee: 0.0001633184418235 NEAR
+│    Transaction ID: 4aUfJ4ATEnqi4UMZi7H3r1CBV1WRu8Xhv73FeRgjYemY
+│    To see the transaction in the transaction explorer, please open this url in your browser:
+│    https://explorer.testnet.near.org/transactions/4aUfJ4ATEnqi4UMZi7H3r1CBV1WRu8Xhv73FeRgjYemY
+│     
+├  Function execution logs:
+│    Logs [writbound-escrow-20261105.testnet]:   No logs
+│    Logs [writbound-escrow-20261105.testnet]:   No logs
+│     
+├  Function execution return value:
+│    Empty return value
+│     
+
+Contract code has been successfully deployed.
+The "new" call to <writbound-escrow-20261105.testnet> on behalf of <writbound-escrow-20261105.testnet> succeeded.
+
+
+
+
+Here is your console command if you need to script it or re-run:
+    'C:\Users\USER\Downloads\Hackathons\WritBound\.tools\near-cli\near-cli-rs-x86_64-pc-windows-msvc\near.exe' contract deploy writbound-escrow-20261105.testnet use-file 'C:\Users\USER\Downloads\Hackathons\WritBound\contracts\writbound-escrow\target\near\writbound_escrow.wasm' with-init-call new json-args '{"verifier":"fcdcd131110d9310c74e6c340e114e92bd79044bbe049d275fadd7d6b3867831"}' prepaid-gas '50.0 Tgas' attached-deposit '0 NEAR' network-config testnet sign-with-keychain --signer-public-key ed25519:EfjHfxMYbW565rUaiAextpLMqEDhjYsLHDk3j37eSMn7 send
+

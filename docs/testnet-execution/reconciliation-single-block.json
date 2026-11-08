@@ -1,0 +1,8 @@
+{
+  "jsonrpc": "2.0",
+  "result": {
+    "block_hash": "J4Z98MJr89CkhRfGhH8TDp3aZVsE2gGCQcK915WzRGgt",
+    "changes": []
+  },
+  "id": "single-read-after-cooldown"
+}

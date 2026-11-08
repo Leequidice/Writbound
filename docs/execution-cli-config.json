@@ -1,0 +1,6 @@
+{
+  "config_path": "C:\\Users\\USER\\AppData\\Roaming\\near-cli\\config.toml",
+  "config_sha256": "8095f074144fafcaf299701d6d6d70b9ae2a03b48223c8a43d22503956021d70",
+  "network_name": "testnet",
+  "rpc_url": "https://archival-rpc.testnet.fastnear.com/"
+}

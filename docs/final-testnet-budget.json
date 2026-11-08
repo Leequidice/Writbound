@@ -1,0 +1,21 @@
+{
+  "available_source_NEAR": "10",
+  "maximum_resource_allocation_NEAR": "7",
+  "four_exact_role_funding_transfers_NEAR": "4",
+  "deployment_code_and_initial_state_allowance_NEAR": "2",
+  "aggregate_network_fee_cap_NEAR": "1",
+  "unallocated_source_headroom_NEAR": "3",
+  "job_escrow_per_job_NEAR": "0.01",
+  "storage_reserve_per_job_NEAR": "0.16384",
+  "two_job_deposits_from_customer_allocation_NEAR": "0.34768",
+  "job_deposit_note": "Included in customer 1-NEAR funding, not extra source capital. 0.32768 NEAR storage reserves are retained permanently; 0.02 escrow is transferred/refunded internally.",
+  "deployment_code_only_storage_estimate_NEAR": "1.67353",
+  "planned_function_gas_Tgas": 2250,
+  "planned_function_prepaid_NEAR": "0.225",
+  "callback_note": "Two 40-Tgas callback allocations are carved out of the successful 150-Tgas settlement/refund calls, already included in 2250; do not add them twice.",
+  "overestimated_action_and_receipt_fee_envelope_NEAR": "0.0132583134272267",
+  "four_implicit_creation_surcharge_estimate_NEAR": "0.028",
+  "conservative_total_fee_envelope_NEAR": "0.6112583134272267",
+  "calculation_note": "19x300 Tgas plus conservative action/receipt envelope and creation-charge allowance at snapshot prices. This overcounts some costs deliberately; not an actual fee quote.",
+  "stop_rule": "No transaction may exceed fixed amounts or the 1-NEAR aggregate fee cap, 2-NEAR deployment/base-state allowance or 7-NEAR resource allocation. Recheck live prices, balances and remaining headroom; stop and request revised approval if any cap would be exceeded. No topups or extra/retry transactions."
+}

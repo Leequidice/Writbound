@@ -1,0 +1,7 @@
+{
+  "contract": "writbound-escrow-20261105.testnet",
+  "verifier": "writbound-verifier-20261105.testnet",
+  "customer": "writbound-customer-20261105.testnet",
+  "worker": "writbound-worker-20261105.testnet",
+  "challenger": "writbound-challenger-20261105.testnet"
+}

@@ -1,0 +1,46 @@
+{
+  "account_activation": "not attempted; no funding or RPC calls",
+  "all_five_verified": true,
+  "onchain_transactions_submitted": 0,
+  "original_approved_mapping_changed": false,
+  "private_material_printed": false,
+  "private_storage": "Windows Credential Manager, official NEAR testnet service/account format; no plaintext key files",
+  "results": {
+    "challenger": {
+      "account_id": "7b1828f1acfc0003b06abf0744f9dea35f53ad105f4e14a24b0901de5a99465f",
+      "method": "local OS keychain, in-memory Ed25519 sign/verify of domain-separated offchain challenge",
+      "public_key": "ed25519:9HWWp5nbU3Htr3XedmBab18Ugkgp1xYV8ZPEoBipAxhU",
+      "reason": "signature verified",
+      "verified": true
+    },
+    "contract": {
+      "account_id": "writbound-escrow-20261105.testnet",
+      "method": "local OS keychain, in-memory Ed25519 sign/verify of domain-separated offchain challenge",
+      "public_key": "ed25519:EfjHfxMYbW565rUaiAextpLMqEDhjYsLHDk3j37eSMn7",
+      "reason": "signature verified",
+      "verified": true
+    },
+    "customer": {
+      "account_id": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+      "method": "local OS keychain, in-memory Ed25519 sign/verify of domain-separated offchain challenge",
+      "public_key": "ed25519:9GDewfDKRUMsuGLGCQbA8A9QPZDF4tsrQZLEzEqBFDMr",
+      "reason": "signature verified",
+      "verified": true
+    },
+    "verifier": {
+      "account_id": "fcdcd131110d9310c74e6c340e114e92bd79044bbe049d275fadd7d6b3867831",
+      "method": "local OS keychain, in-memory Ed25519 sign/verify of domain-separated offchain challenge",
+      "public_key": "ed25519:J252qTj1Q7RS8CN8a1L96LmtoKqSfiDa8QJa2nrzdCqv",
+      "reason": "signature verified",
+      "verified": true
+    },
+    "worker": {
+      "account_id": "75b826f8ba2f37eb9431805f7a19659f0ecd81e7458eeefd42663b9365a67f55",
+      "method": "local OS keychain, in-memory Ed25519 sign/verify of domain-separated offchain challenge",
+      "public_key": "ed25519:8vXZpNbQrcjhp2Dp4EBBYtrnNvHoF35bXWWhnpCQmmb2",
+      "reason": "signature verified",
+      "verified": true
+    }
+  },
+  "status": "OFFLINE REPLACEMENT PROPOSAL ONLY; revised identities require fresh transaction approval"
+}

@@ -1,0 +1,22 @@
+{
+  "artifact_sha256": "41db277a79fb2579196eb99425c7e0de408665097e38c42c5d04459941704c2d",
+  "errors": [],
+  "inference": {
+    "generated_tokens": 37,
+    "model": "qwen2.5:3b",
+    "ollama_duration_ns": 8542097200,
+    "wall_ms": 8553
+  },
+  "input_rows": 5,
+  "input_sha256": "4586840fefb1f6b691cdc3753d9193701cdb2da8f56b6c0da58ff8915de4e99b",
+  "job_id": "7080f8a03126461f8682d3a4583d0e68",
+  "operations": [
+    "normalize_column_names",
+    "trim_whitespace",
+    "remove_empty_rows",
+    "fill_missing",
+    "remove_duplicates"
+  ],
+  "output_rows": 3,
+  "status": "succeeded"
+}

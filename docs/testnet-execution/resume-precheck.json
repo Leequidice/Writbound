@@ -1,0 +1,36 @@
+{
+  "network": "testnet",
+  "artifact_sha256": "b0e079d44375cda2baf0f242f5aa405d2c0cf158782b4817b9b0ce2284e30019",
+  "plan_sha256": "33266af8dab092cce7c4e5eea92d96cc539dd552dd8116a81895107902f11345",
+  "step_1_final": true,
+  "free_unauthenticated_queries": true,
+  "fee_spent_yocto": "7114989537500000000000",
+  "snapshot": {
+    "block_height": 276299385,
+    "block_hash": "GxHTQ1t6WPKeNxMxgFExX5z1T2ZuwrHkUeuicbgGWhnR",
+    "timestamp_ns": "1793856494882951072",
+    "accounts": {
+      "challenger": null,
+      "contract": {
+        "amount": "8992885010462500000000000",
+        "block_hash": "GxHTQ1t6WPKeNxMxgFExX5z1T2ZuwrHkUeuicbgGWhnR",
+        "block_height": 276299385,
+        "code_hash": "11111111111111111111111111111111",
+        "locked": "0",
+        "storage_paid_at": 0,
+        "storage_usage": 182
+      },
+      "customer": null,
+      "verifier": {
+        "amount": "1000000000000000000000000",
+        "block_hash": "GxHTQ1t6WPKeNxMxgFExX5z1T2ZuwrHkUeuicbgGWhnR",
+        "block_height": 276299385,
+        "code_hash": "11111111111111111111111111111111",
+        "locked": "0",
+        "storage_paid_at": 0,
+        "storage_usage": 182
+      },
+      "worker": null
+    }
+  }
+}

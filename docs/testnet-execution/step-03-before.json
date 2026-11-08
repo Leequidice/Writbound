@@ -1,0 +1,36 @@
+{
+  "block_height": 276299742,
+  "block_hash": "EkHCST1Q1xASBRUvosZm8sDUDsRWjfnXgHzexSigzcoi",
+  "timestamp_ns": "1793856714497280697",
+  "accounts": {
+    "challenger": null,
+    "contract": {
+      "amount": "7985770020925000000000000",
+      "block_hash": "EkHCST1Q1xASBRUvosZm8sDUDsRWjfnXgHzexSigzcoi",
+      "block_height": 276299742,
+      "code_hash": "11111111111111111111111111111111",
+      "locked": "0",
+      "storage_paid_at": 0,
+      "storage_usage": 182
+    },
+    "customer": {
+      "amount": "1000000000000000000000000",
+      "block_hash": "EkHCST1Q1xASBRUvosZm8sDUDsRWjfnXgHzexSigzcoi",
+      "block_height": 276299742,
+      "code_hash": "11111111111111111111111111111111",
+      "locked": "0",
+      "storage_paid_at": 0,
+      "storage_usage": 182
+    },
+    "verifier": {
+      "amount": "1000000000000000000000000",
+      "block_hash": "EkHCST1Q1xASBRUvosZm8sDUDsRWjfnXgHzexSigzcoi",
+      "block_height": 276299742,
+      "code_hash": "11111111111111111111111111111111",
+      "locked": "0",
+      "storage_paid_at": 0,
+      "storage_usage": 182
+    },
+    "worker": null
+  }
+}

@@ -1,0 +1,1 @@
+The actual submitted CLI output was not retained because an overbroad filter mistook its public signature for private material. See step-01-rpc.json for actual chain evidence. The separate step-01-prebroadcast-prompt.log records only the earlier unsigned helper attempt.

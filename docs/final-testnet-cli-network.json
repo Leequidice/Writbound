@@ -1,0 +1,15 @@
+{
+  "config_path": "C:\\Users\\USER\\AppData\\Roaming\\near-cli\\config.toml",
+  "testnet_connection_present": true,
+  "network_name": "testnet",
+  "rpc_scheme": "https",
+  "rpc_host": "archival-rpc.testnet.fastnear.com",
+  "rpc_has_userinfo": false,
+  "rpc_has_query": false,
+  "rpc_path": "/",
+  "secret_values_printed": false,
+  "live_chain_id": "testnet",
+  "cli_rpc_testnet_verified": true,
+  "config_changed": false,
+  "rpc_is_same_as_preflight_host": false
+}

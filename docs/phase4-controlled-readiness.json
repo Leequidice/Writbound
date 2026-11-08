@@ -1,0 +1,24 @@
+{
+  "broadcast_status": "Awaiting explicit owner authorization",
+  "approved_demo_calls": 12,
+  "job0_cleanup_included": false,
+  "preflight_block": 276732069,
+  "preflight_utc": "2026-11-08T05:18:11.5100000+00:00",
+  "deployed_wasm_sha256": "b0e079d44375cda2baf0f242f5aa405d2c0cf158782b4817b9b0ce2284e30019",
+  "finalized_signer_access": [
+    "customer",
+    "worker",
+    "verifier",
+    "challenger"
+  ],
+  "demo_prepaid_gas_tgas": 1300,
+  "demo_prepaid_gas_at_snapshot_yocto": "130000000000000000000000",
+  "conservative_projected_allocation_yocto": "6641290794727264300000000",
+  "local_jobs": {
+    "success_local_id": "7199ecff6c49475dbae398165674dd9e",
+    "challenge_local_id": "e3f8c0839e444482b71cd913e7e317c3",
+    "specification_sha256": "6112127c82bc59c4d16b730bc0aaa4138f2969a02320cfecf0712333e8772200",
+    "onchain_transactions": 0
+  },
+  "onchain_transactions_submitted": 0
+}

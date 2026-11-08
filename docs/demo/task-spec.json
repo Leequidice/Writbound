@@ -1,0 +1,11 @@
+{
+  "checks": [
+    "header_matches_input",
+    "no_exact_duplicate_output_rows",
+    "all_distinct_input_rows_retained_in_order"
+  ],
+  "input_sha256": "17e6c8e5fab69afe61b238134c52f016c8234b0165c4b1fc8ab963a54213b638",
+  "schema_version": 1,
+  "suite_version": "writbound-demo-csv-v1",
+  "task": "Remove exact duplicate rows, keep first occurrence and every distinct input row in order; preserve string values and header."
+}

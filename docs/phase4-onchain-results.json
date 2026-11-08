@@ -1,0 +1,1183 @@
+{
+  "status": "completed",
+  "approved_packet_sha256": "fa4915c188914eb9242a9aca0acc600d76ffd19c4f369f28a1528002fffd1baa",
+  "historical_fees_yocto": "30032481300037600000000",
+  "fees_yocto": "34361793482383500000000",
+  "baseline": {
+    "block": {
+      "hash": "6EjYUdhPUP4cgSrvXdpuehb9owgamBugaUzqs3kcbzaP",
+      "height": 276733522,
+      "timestamp_nanosec": "1794115966550429853"
+    },
+    "accounts": {
+      "challenger": {
+        "amount": "1000000000000000000000000",
+        "block_hash": "6EjYUdhPUP4cgSrvXdpuehb9owgamBugaUzqs3kcbzaP",
+        "block_height": 276733522,
+        "code_hash": "11111111111111111111111111111111",
+        "locked": "0",
+        "storage_paid_at": 0,
+        "storage_usage": 182
+      },
+      "contract": {
+        "amount": "6143989966616053400000000",
+        "block_hash": "6EjYUdhPUP4cgSrvXdpuehb9owgamBugaUzqs3kcbzaP",
+        "block_height": 276733522,
+        "code_hash": "CuTHP5d4SUnkkVjUGn3b8UzBXkS2i8KABabNDrpZhKS8",
+        "locked": "0",
+        "storage_paid_at": 0,
+        "storage_usage": 168013
+      },
+      "customer": {
+        "amount": "825977552083909000000000",
+        "block_hash": "6EjYUdhPUP4cgSrvXdpuehb9owgamBugaUzqs3kcbzaP",
+        "block_height": 276733522,
+        "code_hash": "11111111111111111111111111111111",
+        "locked": "0",
+        "storage_paid_at": 0,
+        "storage_usage": 182
+      },
+      "verifier": {
+        "amount": "1000000000000000000000000",
+        "block_hash": "6EjYUdhPUP4cgSrvXdpuehb9owgamBugaUzqs3kcbzaP",
+        "block_height": 276733522,
+        "code_hash": "11111111111111111111111111111111",
+        "locked": "0",
+        "storage_paid_at": 0,
+        "storage_usage": 182
+      },
+      "worker": {
+        "amount": "1000000000000000000000000",
+        "block_hash": "6EjYUdhPUP4cgSrvXdpuehb9owgamBugaUzqs3kcbzaP",
+        "block_height": 276733522,
+        "code_hash": "11111111111111111111111111111111",
+        "locked": "0",
+        "storage_paid_at": 0,
+        "storage_usage": 182
+      }
+    },
+    "gas_price": "100000000",
+    "accounting": {
+      "unpaid_escrow": "10000000000000000000000",
+      "pending_transfers": "0",
+      "storage_reserves": "163840000000000000000000",
+      "total_paid": "0",
+      "total_refunded": "0"
+    },
+    "storage_byte_cost": "10000000000000000000"
+  },
+  "jobs": {
+    "A": "1",
+    "B": "2"
+  },
+  "rows": [
+    {
+      "step": 1,
+      "lane": "A",
+      "method": "create_job",
+      "intent": {
+        "network": "testnet",
+        "method": "create_job",
+        "signer": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+        "receiver": "writbound-escrow-20261105.testnet",
+        "args": {
+          "escrow": "10000000000000000000000",
+          "specification_hash": "6112127c82bc59c4d16b730bc0aaa4138f2969a02320cfecf0712333e8772200",
+          "work_deadline": "1794123007578190698",
+          "challenge_duration": "3600000000000"
+        },
+        "gas": "100000000000000",
+        "deposit": "173840000000000000000000",
+        "mode": "success"
+      },
+      "intent_id": "90b694b7-519e-4364-915c-5724548caf66",
+      "hash": "E9vZFyZKpww6HMgNyisr4jLn56ueCJJsCoKCNU2i1egS",
+      "explorer": "https://testnet.nearblocks.io/txns/E9vZFyZKpww6HMgNyisr4jLn56ueCJJsCoKCNU2i1egS",
+      "nonce": "276299609000002",
+      "nonce_before": "276299609000001",
+      "signing_block": "3ZPmjzZzB9McUPvdige1TFVCAw4UBtcmDatMWXXj6BB9",
+      "status": "verified",
+      "fee_yocto": "183359916091000000000",
+      "job_id": "1",
+      "job": {
+        "id": "1",
+        "customer": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+        "worker": null,
+        "escrow": "10000000000000000000000",
+        "storage_reserve": "163840000000000000000000",
+        "specification_hash": "6112127c82bc59c4d16b730bc0aaa4138f2969a02320cfecf0712333e8772200",
+        "created_at": "1794116033711314155",
+        "work_deadline": "1794123007578190698",
+        "challenge_duration": "3600000000000",
+        "state": "Open",
+        "accepted_at": null,
+        "refund_eligible_at": null,
+        "submissions": [],
+        "challenges": [],
+        "correction_deadline": null,
+        "refund_reason": null,
+        "transfer_attempt": "0",
+        "transfer_completed_at": null
+      },
+      "finalized_block": {
+        "hash": "9BrJCxs4tkDK9SmRexUczL4NHZCBpZUeSNmDVYXXr5ES",
+        "height": 276733637,
+        "timestamp_nanosec": "1794116036067377200"
+      }
+    },
+    {
+      "step": 2,
+      "lane": "A",
+      "method": "accept_job",
+      "intent": {
+        "network": "testnet",
+        "method": "accept_job",
+        "signer": "75b826f8ba2f37eb9431805f7a19659f0ecd81e7458eeefd42663b9365a67f55",
+        "receiver": "writbound-escrow-20261105.testnet",
+        "args": {
+          "job_id": "1"
+        },
+        "gas": "100000000000000",
+        "deposit": "0",
+        "mode": "success"
+      },
+      "intent_id": "7dee90cb-0fc1-42ff-8f2f-6b425792f174",
+      "hash": "GevViVqqfNveUq9f1xoZbPxZHEiwBCu8r8cT51gvv1jN",
+      "explorer": "https://testnet.nearblocks.io/txns/GevViVqqfNveUq9f1xoZbPxZHEiwBCu8r8cT51gvv1jN",
+      "nonce": "276299764000001",
+      "nonce_before": "276299764000000",
+      "signing_block": "4d15Awhsy2etkqNhEcfxq1PsuicyNZMEd3EXiCv4zSet",
+      "status": "verified",
+      "fee_yocto": "184970546309700000000",
+      "job": {
+        "id": "1",
+        "customer": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+        "worker": "75b826f8ba2f37eb9431805f7a19659f0ecd81e7458eeefd42663b9365a67f55",
+        "escrow": "10000000000000000000000",
+        "storage_reserve": "163840000000000000000000",
+        "specification_hash": "6112127c82bc59c4d16b730bc0aaa4138f2969a02320cfecf0712333e8772200",
+        "created_at": "1794116033711314155",
+        "work_deadline": "1794123007578190698",
+        "challenge_duration": "3600000000000",
+        "state": "Accepted",
+        "accepted_at": "1794116083881444285",
+        "refund_eligible_at": null,
+        "submissions": [],
+        "challenges": [],
+        "correction_deadline": null,
+        "refund_reason": null,
+        "transfer_attempt": "0",
+        "transfer_completed_at": null
+      },
+      "finalized_block": {
+        "hash": "57bdhkPdTxYcZodWXim3LVaPZr4fLjGLBfoXd96tPQX6",
+        "height": 276733722,
+        "timestamp_nanosec": "1794116088862643870"
+      }
+    },
+    {
+      "step": 3,
+      "lane": "A",
+      "method": "submit_work",
+      "intent": {
+        "network": "testnet",
+        "method": "submit_work",
+        "signer": "75b826f8ba2f37eb9431805f7a19659f0ecd81e7458eeefd42663b9365a67f55",
+        "receiver": "writbound-escrow-20261105.testnet",
+        "args": {
+          "job_id": "1",
+          "artifact_hash": "41db277a79fb2579196eb99425c7e0de408665097e38c42c5d04459941704c2d",
+          "metadata": null
+        },
+        "gas": "100000000000000",
+        "deposit": "0",
+        "mode": "success"
+      },
+      "intent_id": "e98bb3db-2069-405f-bc8c-ce2c7b027809",
+      "hash": "GUTAACBD9KzYNicVZ5EdHNpF8nMgK2o1ec63bHgnxUko",
+      "explorer": "https://testnet.nearblocks.io/txns/GUTAACBD9KzYNicVZ5EdHNpF8nMgK2o1ec63bHgnxUko",
+      "nonce": "276299764000002",
+      "nonce_before": "276299764000001",
+      "signing_block": "CK93vuDcEbypZ27YDghmogbRA3Vi1ATzKR1evNzm49ia",
+      "status": "verified",
+      "fee_yocto": "186484402043900000000",
+      "job": {
+        "id": "1",
+        "customer": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+        "worker": "75b826f8ba2f37eb9431805f7a19659f0ecd81e7458eeefd42663b9365a67f55",
+        "escrow": "10000000000000000000000",
+        "storage_reserve": "163840000000000000000000",
+        "specification_hash": "6112127c82bc59c4d16b730bc0aaa4138f2969a02320cfecf0712333e8772200",
+        "created_at": "1794116033711314155",
+        "work_deadline": "1794123007578190698",
+        "challenge_duration": "3600000000000",
+        "state": "Submitted",
+        "accepted_at": "1794116083881444285",
+        "refund_eligible_at": null,
+        "submissions": [
+          {
+            "artifact_hash": "41db277a79fb2579196eb99425c7e0de408665097e38c42c5d04459941704c2d",
+            "metadata": null,
+            "timestamp": "1794116162752605043",
+            "verification_deadline": "1794202562752605043",
+            "verification": null,
+            "challenge_end": null
+          }
+        ],
+        "challenges": [],
+        "correction_deadline": null,
+        "refund_reason": null,
+        "transfer_attempt": "0",
+        "transfer_completed_at": null
+      },
+      "finalized_block": {
+        "hash": "8KeVutTgh2bCBSkWPwPpaSzmFVJdhZtznErHReDWwcec",
+        "height": 276733849,
+        "timestamp_nanosec": "1794116167220951779"
+      }
+    },
+    {
+      "step": 4,
+      "lane": "A",
+      "method": "attest_verification",
+      "intent": {
+        "network": "testnet",
+        "method": "attest_verification",
+        "signer": "fcdcd131110d9310c74e6c340e114e92bd79044bbe049d275fadd7d6b3867831",
+        "receiver": "writbound-escrow-20261105.testnet",
+        "args": {
+          "job_id": "1",
+          "passed": true,
+          "evidence_hash": "0bb23e74882cb9542a063ebbd6e5bc99d62c35d6818079a39d57a834bce35156"
+        },
+        "gas": "100000000000000",
+        "deposit": "0",
+        "mode": "success",
+        "evidence": "{\"schema_version\":1,\"kind\":\"deterministic_verification_pass\",\"network\":\"testnet\",\"contract\":\"writbound-escrow-20261105.testnet\",\"job_id\":\"1\",\"specification_hash\":\"6112127c82bc59c4d16b730bc0aaa4138f2969a02320cfecf0712333e8772200\",\"artifact_hash\":\"41db277a79fb2579196eb99425c7e0de408665097e38c42c5d04459941704c2d\",\"source_report_sha256\":\"580570d6c797f57704a30d1cc9e7c7dc8aa1b3bb86d2649b4cfcaaba6c6d1b8e\",\"deterministic_verification_passed\":true}\n"
+      },
+      "intent_id": "0897c799-7216-4890-b367-ab40e24577bd",
+      "hash": "8gytJVimymvcQea3SVDfKmyik1VjretTjXTKLZkGv4zH",
+      "explorer": "https://testnet.nearblocks.io/txns/8gytJVimymvcQea3SVDfKmyik1VjretTjXTKLZkGv4zH",
+      "nonce": "276295371000001",
+      "nonce_before": "276295371000000",
+      "signing_block": "BUGF2cn3NwPDWBjXMgQSaCxSZPm4iTm5djQ9MKYcsFFg",
+      "status": "verified",
+      "fee_yocto": "187718811852800000000",
+      "job": {
+        "id": "1",
+        "customer": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+        "worker": "75b826f8ba2f37eb9431805f7a19659f0ecd81e7458eeefd42663b9365a67f55",
+        "escrow": "10000000000000000000000",
+        "storage_reserve": "163840000000000000000000",
+        "specification_hash": "6112127c82bc59c4d16b730bc0aaa4138f2969a02320cfecf0712333e8772200",
+        "created_at": "1794116033711314155",
+        "work_deadline": "1794123007578190698",
+        "challenge_duration": "3600000000000",
+        "state": "Verified",
+        "accepted_at": "1794116083881444285",
+        "refund_eligible_at": null,
+        "submissions": [
+          {
+            "artifact_hash": "41db277a79fb2579196eb99425c7e0de408665097e38c42c5d04459941704c2d",
+            "metadata": null,
+            "timestamp": "1794116162752605043",
+            "verification_deadline": "1794202562752605043",
+            "verification": {
+              "passed": true,
+              "evidence_hash": "0bb23e74882cb9542a063ebbd6e5bc99d62c35d6818079a39d57a834bce35156",
+              "timestamp": "1794116214060788948"
+            },
+            "challenge_end": "1794119814060788948"
+          }
+        ],
+        "challenges": [],
+        "correction_deadline": null,
+        "refund_reason": null,
+        "transfer_attempt": "0",
+        "transfer_completed_at": null
+      },
+      "finalized_block": {
+        "hash": "i3arXgUGpkXW2T5mFH8UxxRkubNcMQ8HK8gAtJnzJCs",
+        "height": 276734100,
+        "timestamp_nanosec": "1794116320371875794"
+      }
+    },
+    {
+      "step": 5,
+      "lane": "A",
+      "method": "settle_job",
+      "intent": {
+        "network": "testnet",
+        "method": "settle_job",
+        "signer": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+        "receiver": "writbound-escrow-20261105.testnet",
+        "args": {
+          "job_id": "1"
+        },
+        "gas": "150000000000000",
+        "deposit": "0",
+        "mode": "success",
+        "beneficiary": {
+          "account_id": "75b826f8ba2f37eb9431805f7a19659f0ecd81e7458eeefd42663b9365a67f55",
+          "amount": "10000000000000000000000"
+        }
+      },
+      "intent_id": "ff0aef0c-877a-49ba-ba22-0a23cd44573d",
+      "hash": "5LsHwiapTRiAncof3WBbUxbw8J9vXRKkdp9WmJeusXf",
+      "explorer": "https://testnet.nearblocks.io/txns/5LsHwiapTRiAncof3WBbUxbw8J9vXRKkdp9WmJeusXf",
+      "nonce": "276299609000003",
+      "nonce_before": "276299609000002",
+      "signing_block": "8PJ69zjX8S12zg21Hqi4CLmQDxf46XJrrwDknjSGZx7s",
+      "status": "verified",
+      "fee_yocto": "1226496671331300000000",
+      "transfer_receipt": "DmscjRGYg69GzZAdaxG9wYrJ7M6746rg1TJSrMh1a194",
+      "callback_receipt": "5Z45rpfY6k9AxJeoAfDMcXBo9YedXKUGZtMziuGyc4px",
+      "job": {
+        "id": "1",
+        "customer": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+        "worker": "75b826f8ba2f37eb9431805f7a19659f0ecd81e7458eeefd42663b9365a67f55",
+        "escrow": "10000000000000000000000",
+        "storage_reserve": "163840000000000000000000",
+        "specification_hash": "6112127c82bc59c4d16b730bc0aaa4138f2969a02320cfecf0712333e8772200",
+        "created_at": "1794116033711314155",
+        "work_deadline": "1794123007578190698",
+        "challenge_duration": "3600000000000",
+        "state": "Paid",
+        "accepted_at": "1794116083881444285",
+        "refund_eligible_at": null,
+        "submissions": [
+          {
+            "artifact_hash": "41db277a79fb2579196eb99425c7e0de408665097e38c42c5d04459941704c2d",
+            "metadata": null,
+            "timestamp": "1794116162752605043",
+            "verification_deadline": "1794202562752605043",
+            "verification": {
+              "passed": true,
+              "evidence_hash": "0bb23e74882cb9542a063ebbd6e5bc99d62c35d6818079a39d57a834bce35156",
+              "timestamp": "1794116214060788948"
+            },
+            "challenge_end": "1794119814060788948"
+          }
+        ],
+        "challenges": [],
+        "correction_deadline": null,
+        "refund_reason": null,
+        "transfer_attempt": "1",
+        "transfer_completed_at": "1794119999835560419"
+      },
+      "finalized_block": {
+        "hash": "K1MWVEtoS2KEUYgJEHv2Xk1hugr7CZTHn5p7DupGoP5",
+        "height": 276740384,
+        "timestamp_nanosec": "1794120010612076736"
+      }
+    },
+    {
+      "step": 6,
+      "lane": "B",
+      "method": "create_job",
+      "intent": {
+        "network": "testnet",
+        "method": "create_job",
+        "signer": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+        "receiver": "writbound-escrow-20261105.testnet",
+        "args": {
+          "escrow": "10000000000000000000000",
+          "specification_hash": "6112127c82bc59c4d16b730bc0aaa4138f2969a02320cfecf0712333e8772200",
+          "work_deadline": "1794127224675431584",
+          "challenge_duration": "3600000000000"
+        },
+        "gas": "100000000000000",
+        "deposit": "173840000000000000000000",
+        "mode": "challenge"
+      },
+      "intent_id": "de8abb09-5281-46e9-aef1-1ca7cae52f41",
+      "hash": "CLUhvU4TzpVarp3FuZjE9zAa33Q2sbgna3EezFZ8f1qF",
+      "explorer": "https://testnet.nearblocks.io/txns/CLUhvU4TzpVarp3FuZjE9zAa33Q2sbgna3EezFZ8f1qF",
+      "nonce": "276299609000004",
+      "nonce_before": "276299609000003",
+      "signing_block": "ApoujwPcbCZMa4ELhKt9qf14qYx8guaz5YxqBpyKeCZD",
+      "status": "verified",
+      "fee_yocto": "183587916091000000000",
+      "job_id": "2",
+      "job": {
+        "id": "2",
+        "customer": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+        "worker": null,
+        "escrow": "10000000000000000000000",
+        "storage_reserve": "163840000000000000000000",
+        "specification_hash": "6112127c82bc59c4d16b730bc0aaa4138f2969a02320cfecf0712333e8772200",
+        "created_at": "1794120071268299597",
+        "work_deadline": "1794127224675431584",
+        "challenge_duration": "3600000000000",
+        "state": "Open",
+        "accepted_at": null,
+        "refund_eligible_at": null,
+        "submissions": [],
+        "challenges": [],
+        "correction_deadline": null,
+        "refund_reason": null,
+        "transfer_attempt": "0",
+        "transfer_completed_at": null
+      },
+      "finalized_block": {
+        "hash": "6cKBVRB6m9scXFT6sbgVAQP2o7EFfvWRismg8xn6EF7y",
+        "height": 276740503,
+        "timestamp_nanosec": "1794120082663291704"
+      }
+    },
+    {
+      "step": 7,
+      "lane": "B",
+      "method": "accept_job",
+      "intent": {
+        "network": "testnet",
+        "method": "accept_job",
+        "signer": "75b826f8ba2f37eb9431805f7a19659f0ecd81e7458eeefd42663b9365a67f55",
+        "receiver": "writbound-escrow-20261105.testnet",
+        "args": {
+          "job_id": "2"
+        },
+        "gas": "100000000000000",
+        "deposit": "0",
+        "mode": "challenge"
+      },
+      "intent_id": "bf445134-d71f-4b39-83a6-be3e096653be",
+      "hash": "J2XpDiUT3xqSJAjc16ABhvot33PmmgHqGKUfyjwtG4pE",
+      "explorer": "https://testnet.nearblocks.io/txns/J2XpDiUT3xqSJAjc16ABhvot33PmmgHqGKUfyjwtG4pE",
+      "nonce": "276299764000003",
+      "nonce_before": "276299764000002",
+      "signing_block": "6U8ecry5zdEVGau58AwxL64wHCqsYQ249nwA9sDpyekj",
+      "status": "verified",
+      "fee_yocto": "184970546309700000000",
+      "job": {
+        "id": "2",
+        "customer": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+        "worker": "75b826f8ba2f37eb9431805f7a19659f0ecd81e7458eeefd42663b9365a67f55",
+        "escrow": "10000000000000000000000",
+        "storage_reserve": "163840000000000000000000",
+        "specification_hash": "6112127c82bc59c4d16b730bc0aaa4138f2969a02320cfecf0712333e8772200",
+        "created_at": "1794120071268299597",
+        "work_deadline": "1794127224675431584",
+        "challenge_duration": "3600000000000",
+        "state": "Accepted",
+        "accepted_at": "1794120151249859145",
+        "refund_eligible_at": null,
+        "submissions": [],
+        "challenges": [],
+        "correction_deadline": null,
+        "refund_reason": null,
+        "transfer_attempt": "0",
+        "transfer_completed_at": null
+      },
+      "finalized_block": {
+        "hash": "Cn1wHpB64VrJ4yUNfkcaoQBtP5EM1zeXULqFm3E7gDrV",
+        "height": 276740636,
+        "timestamp_nanosec": "1794120163262366263"
+      }
+    },
+    {
+      "step": 8,
+      "lane": "B",
+      "method": "submit_work",
+      "intent": {
+        "network": "testnet",
+        "method": "submit_work",
+        "signer": "75b826f8ba2f37eb9431805f7a19659f0ecd81e7458eeefd42663b9365a67f55",
+        "receiver": "writbound-escrow-20261105.testnet",
+        "args": {
+          "job_id": "2",
+          "artifact_hash": "132f5e6720257a9dbed84902cb8e0845adf4db2d9aa04f9799ba0f748b2a08da",
+          "metadata": null
+        },
+        "gas": "100000000000000",
+        "deposit": "0",
+        "mode": "challenge"
+      },
+      "intent_id": "a376e521-cb39-4077-b159-50f7cdc5f213",
+      "hash": "J7KtdqB9X795yA15LtgkUzVep9oGvNmVashnKFw9voHw",
+      "explorer": "https://testnet.nearblocks.io/txns/J7KtdqB9X795yA15LtgkUzVep9oGvNmVashnKFw9voHw",
+      "nonce": "276299764000004",
+      "nonce_before": "276299764000003",
+      "signing_block": "DtchsH29ERCog5HTfzv8nT6JPE77vcBEU6c7sTd3ss2q",
+      "status": "verified",
+      "fee_yocto": "186484402043900000000",
+      "job": {
+        "id": "2",
+        "customer": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+        "worker": "75b826f8ba2f37eb9431805f7a19659f0ecd81e7458eeefd42663b9365a67f55",
+        "escrow": "10000000000000000000000",
+        "storage_reserve": "163840000000000000000000",
+        "specification_hash": "6112127c82bc59c4d16b730bc0aaa4138f2969a02320cfecf0712333e8772200",
+        "created_at": "1794120071268299597",
+        "work_deadline": "1794127224675431584",
+        "challenge_duration": "3600000000000",
+        "state": "Submitted",
+        "accepted_at": "1794120151249859145",
+        "refund_eligible_at": null,
+        "submissions": [
+          {
+            "artifact_hash": "132f5e6720257a9dbed84902cb8e0845adf4db2d9aa04f9799ba0f748b2a08da",
+            "metadata": null,
+            "timestamp": "1794120224448435850",
+            "verification_deadline": "1794206624448435850",
+            "verification": null,
+            "challenge_end": null
+          }
+        ],
+        "challenges": [],
+        "correction_deadline": null,
+        "refund_reason": null,
+        "transfer_attempt": "0",
+        "transfer_completed_at": null
+      },
+      "finalized_block": {
+        "hash": "5pP6BMNpLA4n4q9rpbmrz7a5byG6iQDX6NRkESD7iSB",
+        "height": 276740769,
+        "timestamp_nanosec": "1794120243901586442"
+      }
+    },
+    {
+      "step": 9,
+      "lane": "B",
+      "method": "attest_verification",
+      "intent": {
+        "network": "testnet",
+        "method": "attest_verification",
+        "signer": "fcdcd131110d9310c74e6c340e114e92bd79044bbe049d275fadd7d6b3867831",
+        "receiver": "writbound-escrow-20261105.testnet",
+        "args": {
+          "job_id": "2",
+          "passed": true,
+          "evidence_hash": "1e4cab53fd86b8f05eda7fb6fd3695ac8a34ae600bed1bc085ba2485c6ded9e6"
+        },
+        "gas": "100000000000000",
+        "deposit": "0",
+        "mode": "challenge",
+        "evidence": "{\"schema_version\":1,\"kind\":\"seeded_positive_demo_fixture\",\"network\":\"testnet\",\"contract\":\"writbound-escrow-20261105.testnet\",\"job_id\":\"2\",\"specification_hash\":\"6112127c82bc59c4d16b730bc0aaa4138f2969a02320cfecf0712333e8772200\",\"artifact_hash\":\"132f5e6720257a9dbed84902cb8e0845adf4db2d9aa04f9799ba0f748b2a08da\",\"source_report_sha256\":\"9b587d3dd48c72feef7cb2e18b183ea035de4e2a201948299568a7fefeea0d5b\",\"deterministic_verification_passed\":false}\n"
+      },
+      "intent_id": "216a22a9-8916-4d5e-8951-abfee81e73b3",
+      "hash": "D5HCSMrJXGDmmHKQ7G2StCRQMncFLfVsEjt2gEJ3Vedb",
+      "explorer": "https://testnet.nearblocks.io/txns/D5HCSMrJXGDmmHKQ7G2StCRQMncFLfVsEjt2gEJ3Vedb",
+      "nonce": "276295371000002",
+      "nonce_before": "276295371000001",
+      "signing_block": "FwQgrLFvYYCc93ENJNbknrkRZJhA7TcrVShfMB26BugB",
+      "status": "verified",
+      "fee_yocto": "187718811852800000000",
+      "job": {
+        "id": "2",
+        "customer": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+        "worker": "75b826f8ba2f37eb9431805f7a19659f0ecd81e7458eeefd42663b9365a67f55",
+        "escrow": "10000000000000000000000",
+        "storage_reserve": "163840000000000000000000",
+        "specification_hash": "6112127c82bc59c4d16b730bc0aaa4138f2969a02320cfecf0712333e8772200",
+        "created_at": "1794120071268299597",
+        "work_deadline": "1794127224675431584",
+        "challenge_duration": "3600000000000",
+        "state": "Verified",
+        "accepted_at": "1794120151249859145",
+        "refund_eligible_at": null,
+        "submissions": [
+          {
+            "artifact_hash": "132f5e6720257a9dbed84902cb8e0845adf4db2d9aa04f9799ba0f748b2a08da",
+            "metadata": null,
+            "timestamp": "1794120224448435850",
+            "verification_deadline": "1794206624448435850",
+            "verification": {
+              "passed": true,
+              "evidence_hash": "1e4cab53fd86b8f05eda7fb6fd3695ac8a34ae600bed1bc085ba2485c6ded9e6",
+              "timestamp": "1794120304387593248"
+            },
+            "challenge_end": "1794123904387593248"
+          }
+        ],
+        "challenges": [],
+        "correction_deadline": null,
+        "refund_reason": null,
+        "transfer_attempt": "0",
+        "transfer_completed_at": null
+      },
+      "finalized_block": {
+        "hash": "6PgYHe5RGVhy49mn92FbF3tubKzLBS8ZudgE4KRXDywY",
+        "height": 276740889,
+        "timestamp_nanosec": "1794120316434726474"
+      }
+    },
+    {
+      "step": 10,
+      "lane": "B",
+      "method": "open_challenge",
+      "intent": {
+        "network": "testnet",
+        "method": "open_challenge",
+        "signer": "7b1828f1acfc0003b06abf0744f9dea35f53ad105f4e14a24b0901de5a99465f",
+        "receiver": "writbound-escrow-20261105.testnet",
+        "args": {
+          "job_id": "2",
+          "evidence_hash": "44fc588e750315e40a7102c48b769ea42d67ba9d038221245d1688295dcad098"
+        },
+        "gas": "100000000000000",
+        "deposit": "0",
+        "mode": "challenge",
+        "evidence": "{\"schema_version\":1,\"kind\":\"deterministic_fixture_failure\",\"network\":\"testnet\",\"contract\":\"writbound-escrow-20261105.testnet\",\"job_id\":\"2\",\"specification_hash\":\"6112127c82bc59c4d16b730bc0aaa4138f2969a02320cfecf0712333e8772200\",\"artifact_hash\":\"132f5e6720257a9dbed84902cb8e0845adf4db2d9aa04f9799ba0f748b2a08da\",\"source_report_sha256\":\"9b587d3dd48c72feef7cb2e18b183ea035de4e2a201948299568a7fefeea0d5b\"}\n"
+      },
+      "intent_id": "31355b5d-8a55-4fd9-87d9-5dbb5f5c379f",
+      "hash": "CaJ8YM8RQAU8V8nzyXZhS6hEbkP9VfogJCKf3Phun2Jc",
+      "explorer": "https://testnet.nearblocks.io/txns/CaJ8YM8RQAU8V8nzyXZhS6hEbkP9VfogJCKf3Phun2Jc",
+      "nonce": "276299867000001",
+      "nonce_before": "276299867000000",
+      "signing_block": "4rCDuaJ8oru6u1DkqyRucpSA3ZZquUqwwfyhXCh6G4dS",
+      "status": "verified",
+      "fee_yocto": "190706082603400000000",
+      "challenge_id": 0,
+      "job": {
+        "id": "2",
+        "customer": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+        "worker": "75b826f8ba2f37eb9431805f7a19659f0ecd81e7458eeefd42663b9365a67f55",
+        "escrow": "10000000000000000000000",
+        "storage_reserve": "163840000000000000000000",
+        "specification_hash": "6112127c82bc59c4d16b730bc0aaa4138f2969a02320cfecf0712333e8772200",
+        "created_at": "1794120071268299597",
+        "work_deadline": "1794127224675431584",
+        "challenge_duration": "3600000000000",
+        "state": "Verified",
+        "accepted_at": "1794120151249859145",
+        "refund_eligible_at": null,
+        "submissions": [
+          {
+            "artifact_hash": "132f5e6720257a9dbed84902cb8e0845adf4db2d9aa04f9799ba0f748b2a08da",
+            "metadata": null,
+            "timestamp": "1794120224448435850",
+            "verification_deadline": "1794206624448435850",
+            "verification": {
+              "passed": true,
+              "evidence_hash": "1e4cab53fd86b8f05eda7fb6fd3695ac8a34ae600bed1bc085ba2485c6ded9e6",
+              "timestamp": "1794120304387593248"
+            },
+            "challenge_end": "1794123904387593248"
+          }
+        ],
+        "challenges": [
+          {
+            "id": 0,
+            "revision": 1,
+            "challenger": "7b1828f1acfc0003b06abf0744f9dea35f53ad105f4e14a24b0901de5a99465f",
+            "evidence_hash": "44fc588e750315e40a7102c48b769ea42d67ba9d038221245d1688295dcad098",
+            "opened_at": "1794120384906694073",
+            "resolution_deadline": "1794206784906694073",
+            "state": "Pending",
+            "resolution_hash": null,
+            "resolved_at": null
+          }
+        ],
+        "correction_deadline": null,
+        "refund_reason": null,
+        "transfer_attempt": "0",
+        "transfer_completed_at": null
+      },
+      "finalized_block": {
+        "hash": "ADbev5xjCqxSk1vbZrTsXH4K4N4pgJm4wQJYqkE6g74v",
+        "height": 276741020,
+        "timestamp_nanosec": "1794120395778974277"
+      }
+    },
+    {
+      "step": 11,
+      "lane": "B",
+      "method": "resolve_challenge",
+      "intent": {
+        "network": "testnet",
+        "method": "resolve_challenge",
+        "signer": "fcdcd131110d9310c74e6c340e114e92bd79044bbe049d275fadd7d6b3867831",
+        "receiver": "writbound-escrow-20261105.testnet",
+        "args": {
+          "job_id": "2",
+          "challenge_id": 0,
+          "upheld": true,
+          "allow_correction": false,
+          "resolution_hash": "7a1df9d32aba5ce89d913874f71645cc6da065307f7f287b90fb6e29aae8ecee"
+        },
+        "gas": "100000000000000",
+        "deposit": "0",
+        "mode": "challenge",
+        "evidence": "{\"schema_version\":1,\"kind\":\"upheld_fixture_challenge\",\"network\":\"testnet\",\"contract\":\"writbound-escrow-20261105.testnet\",\"job_id\":\"2\",\"specification_hash\":\"6112127c82bc59c4d16b730bc0aaa4138f2969a02320cfecf0712333e8772200\",\"artifact_hash\":\"132f5e6720257a9dbed84902cb8e0845adf4db2d9aa04f9799ba0f748b2a08da\",\"source_report_sha256\":\"9b587d3dd48c72feef7cb2e18b183ea035de4e2a201948299568a7fefeea0d5b\",\"challenge_id\":0,\"challenge_evidence_hash\":\"44fc588e750315e40a7102c48b769ea42d67ba9d038221245d1688295dcad098\",\"upheld\":true,\"allow_correction\":false}\n"
+      },
+      "intent_id": "69cb40ee-265b-4804-b4fe-af534527564d",
+      "hash": "Ch3CJnxcYYDFZdfi2rgGsHeUjzaS1X6YjCZNYniNxKoE",
+      "explorer": "https://testnet.nearblocks.io/txns/Ch3CJnxcYYDFZdfi2rgGsHeUjzaS1X6YjCZNYniNxKoE",
+      "nonce": "276295371000003",
+      "nonce_before": "276295371000002",
+      "signing_block": "HMZyB1LbKBgnatooCSayrSwQP1JxwJdEDmmbtUU54LZZ",
+      "status": "verified",
+      "fee_yocto": "192169152373200000000",
+      "job": {
+        "id": "2",
+        "customer": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+        "worker": "75b826f8ba2f37eb9431805f7a19659f0ecd81e7458eeefd42663b9365a67f55",
+        "escrow": "10000000000000000000000",
+        "storage_reserve": "163840000000000000000000",
+        "specification_hash": "6112127c82bc59c4d16b730bc0aaa4138f2969a02320cfecf0712333e8772200",
+        "created_at": "1794120071268299597",
+        "work_deadline": "1794127224675431584",
+        "challenge_duration": "3600000000000",
+        "state": "Refundable",
+        "accepted_at": "1794120151249859145",
+        "refund_eligible_at": "1794120456327607146",
+        "submissions": [
+          {
+            "artifact_hash": "132f5e6720257a9dbed84902cb8e0845adf4db2d9aa04f9799ba0f748b2a08da",
+            "metadata": null,
+            "timestamp": "1794120224448435850",
+            "verification_deadline": "1794206624448435850",
+            "verification": {
+              "passed": true,
+              "evidence_hash": "1e4cab53fd86b8f05eda7fb6fd3695ac8a34ae600bed1bc085ba2485c6ded9e6",
+              "timestamp": "1794120304387593248"
+            },
+            "challenge_end": "1794123904387593248"
+          }
+        ],
+        "challenges": [
+          {
+            "id": 0,
+            "revision": 1,
+            "challenger": "7b1828f1acfc0003b06abf0744f9dea35f53ad105f4e14a24b0901de5a99465f",
+            "evidence_hash": "44fc588e750315e40a7102c48b769ea42d67ba9d038221245d1688295dcad098",
+            "opened_at": "1794120384906694073",
+            "resolution_deadline": "1794206784906694073",
+            "state": "Upheld",
+            "resolution_hash": "7a1df9d32aba5ce89d913874f71645cc6da065307f7f287b90fb6e29aae8ecee",
+            "resolved_at": "1794120456327607146"
+          }
+        ],
+        "correction_deadline": null,
+        "refund_reason": "challenge_upheld",
+        "transfer_attempt": "0",
+        "transfer_completed_at": null
+      },
+      "finalized_block": {
+        "hash": "4oWH8PRPZUHnywW8HVLivcVm7q3J1SHo2LLxYmNjm1Xa",
+        "height": 276741141,
+        "timestamp_nanosec": "1794120469079165260"
+      }
+    },
+    {
+      "step": 12,
+      "lane": "B",
+      "method": "refund_job",
+      "intent": {
+        "network": "testnet",
+        "method": "refund_job",
+        "signer": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+        "receiver": "writbound-escrow-20261105.testnet",
+        "args": {
+          "job_id": "2"
+        },
+        "gas": "150000000000000",
+        "deposit": "0",
+        "mode": "challenge",
+        "beneficiary": {
+          "account_id": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+          "amount": "10000000000000000000000"
+        }
+      },
+      "intent_id": "45943bf8-b5f4-4803-8dbc-f8cd941b94a0",
+      "hash": "Dd3hyXRQFKWNobm1WSZNBDjkCD6PgS1kKJmqzwr9qnHL",
+      "explorer": "https://testnet.nearblocks.io/txns/Dd3hyXRQFKWNobm1WSZNBDjkCD6PgS1kKJmqzwr9qnHL",
+      "nonce": "276299609000005",
+      "nonce_before": "276299609000004",
+      "signing_block": "6W9PMro4Y1VenEwJv4DfSXGopCYmQug7RjSH1eW5LtdR",
+      "status": "verified",
+      "fee_yocto": "1234644923443200000000",
+      "transfer_receipt": "7EihgKiy1aJCWKfQa3uHYkeRzRXBpFeUREfoRhjtzj6X",
+      "callback_receipt": "GWjNWtX1dPG44FZ2Po2S7o2ud27HTTHv77BiwYJSBn3L",
+      "job": {
+        "id": "2",
+        "customer": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+        "worker": "75b826f8ba2f37eb9431805f7a19659f0ecd81e7458eeefd42663b9365a67f55",
+        "escrow": "10000000000000000000000",
+        "storage_reserve": "163840000000000000000000",
+        "specification_hash": "6112127c82bc59c4d16b730bc0aaa4138f2969a02320cfecf0712333e8772200",
+        "created_at": "1794120071268299597",
+        "work_deadline": "1794127224675431584",
+        "challenge_duration": "3600000000000",
+        "state": "Refunded",
+        "accepted_at": "1794120151249859145",
+        "refund_eligible_at": "1794120456327607146",
+        "submissions": [
+          {
+            "artifact_hash": "132f5e6720257a9dbed84902cb8e0845adf4db2d9aa04f9799ba0f748b2a08da",
+            "metadata": null,
+            "timestamp": "1794120224448435850",
+            "verification_deadline": "1794206624448435850",
+            "verification": {
+              "passed": true,
+              "evidence_hash": "1e4cab53fd86b8f05eda7fb6fd3695ac8a34ae600bed1bc085ba2485c6ded9e6",
+              "timestamp": "1794120304387593248"
+            },
+            "challenge_end": "1794123904387593248"
+          }
+        ],
+        "challenges": [
+          {
+            "id": 0,
+            "revision": 1,
+            "challenger": "7b1828f1acfc0003b06abf0744f9dea35f53ad105f4e14a24b0901de5a99465f",
+            "evidence_hash": "44fc588e750315e40a7102c48b769ea42d67ba9d038221245d1688295dcad098",
+            "opened_at": "1794120384906694073",
+            "resolution_deadline": "1794206784906694073",
+            "state": "Upheld",
+            "resolution_hash": "7a1df9d32aba5ce89d913874f71645cc6da065307f7f287b90fb6e29aae8ecee",
+            "resolved_at": "1794120456327607146"
+          }
+        ],
+        "correction_deadline": null,
+        "refund_reason": "challenge_upheld",
+        "transfer_attempt": "1",
+        "transfer_completed_at": "1794120538170361578"
+      },
+      "finalized_block": {
+        "hash": "4djMJmCEtwcePgjDurRdbr9fZsGWP1KdcfCmu3Qfhh1r",
+        "height": 276741273,
+        "timestamp_nanosec": "1794120548967751733"
+      }
+    }
+  ],
+  "local_incident": "Online CLI sign-only mode selected a different block hash. Offline sign-only mode validated the exact pinned block. No broadcast occurred before recovery.",
+  "worker": {
+    "run": {
+      "artifact_sha256": "41db277a79fb2579196eb99425c7e0de408665097e38c42c5d04459941704c2d",
+      "errors": [],
+      "inference": {
+        "generated_tokens": 37,
+        "model": "qwen2.5:3b",
+        "ollama_duration_ns": 14019053400,
+        "wall_ms": 14038
+      },
+      "input_rows": 5,
+      "input_sha256": "4586840fefb1f6b691cdc3753d9193701cdb2da8f56b6c0da58ff8915de4e99b",
+      "job_id": "7199ecff6c49475dbae398165674dd9e",
+      "operations": [
+        "normalize_column_names",
+        "trim_whitespace",
+        "remove_empty_rows",
+        "fill_missing",
+        "remove_duplicates"
+      ],
+      "output_rows": 3,
+      "status": "succeeded"
+    },
+    "verification": {
+      "artifact_sha256": "41db277a79fb2579196eb99425c7e0de408665097e38c42c5d04459941704c2d",
+      "expected_sha256": "41db277a79fb2579196eb99425c7e0de408665097e38c42c5d04459941704c2d",
+      "input_sha256": "4586840fefb1f6b691cdc3753d9193701cdb2da8f56b6c0da58ff8915de4e99b",
+      "job_id": "7199ecff6c49475dbae398165674dd9e",
+      "mismatch": null,
+      "passed": true,
+      "specification_sha256": "6112127c82bc59c4d16b730bc0aaa4138f2969a02320cfecf0712333e8772200",
+      "suite": "writbound-csv-v1"
+    },
+    "artifact_sha256": "41db277a79fb2579196eb99425c7e0de408665097e38c42c5d04459941704c2d"
+  },
+  "challengeEnd": "1794119814060788948",
+  "stop_reconciliation": {
+    "block": {
+      "hash": "i3arXgUGpkXW2T5mFH8UxxRkubNcMQ8HK8gAtJnzJCs",
+      "height": 276734100,
+      "timestamp_nanosec": "1794116320371875794"
+    },
+    "accounts": {
+      "challenger": {
+        "amount": "1000000000000000000000000",
+        "block_hash": "i3arXgUGpkXW2T5mFH8UxxRkubNcMQ8HK8gAtJnzJCs",
+        "block_height": 276734100,
+        "code_hash": "11111111111111111111111111111111",
+        "locked": "0",
+        "storage_paid_at": 0,
+        "storage_usage": 182
+      },
+      "contract": {
+        "amount": "6317829966616053400000000",
+        "block_hash": "i3arXgUGpkXW2T5mFH8UxxRkubNcMQ8HK8gAtJnzJCs",
+        "block_height": 276734100,
+        "code_hash": "CuTHP5d4SUnkkVjUGn3b8UzBXkS2i8KABabNDrpZhKS8",
+        "locked": "0",
+        "storage_paid_at": 0,
+        "storage_usage": 168533
+      },
+      "customer": {
+        "amount": "651954192167818000000000",
+        "block_hash": "i3arXgUGpkXW2T5mFH8UxxRkubNcMQ8HK8gAtJnzJCs",
+        "block_height": 276734100,
+        "code_hash": "11111111111111111111111111111111",
+        "locked": "0",
+        "storage_paid_at": 0,
+        "storage_usage": 182
+      },
+      "verifier": {
+        "amount": "999812281188147200000000",
+        "block_hash": "i3arXgUGpkXW2T5mFH8UxxRkubNcMQ8HK8gAtJnzJCs",
+        "block_height": 276734100,
+        "code_hash": "11111111111111111111111111111111",
+        "locked": "0",
+        "storage_paid_at": 0,
+        "storage_usage": 182
+      },
+      "worker": {
+        "amount": "999628545051646400000000",
+        "block_hash": "i3arXgUGpkXW2T5mFH8UxxRkubNcMQ8HK8gAtJnzJCs",
+        "block_height": 276734100,
+        "code_hash": "11111111111111111111111111111111",
+        "locked": "0",
+        "storage_paid_at": 0,
+        "storage_usage": 182
+      }
+    },
+    "accounting": {
+      "unpaid_escrow": "20000000000000000000000",
+      "pending_transfers": "0",
+      "storage_reserves": "327680000000000000000000",
+      "total_paid": "0",
+      "total_refunded": "0"
+    },
+    "job0": {
+      "id": "0",
+      "customer": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+      "worker": null,
+      "escrow": "10000000000000000000000",
+      "storage_reserve": "163840000000000000000000",
+      "specification_hash": "22ef89f1100657c91dd5c36f583f192538825f6e1a8b3abb3942f3161faff342",
+      "created_at": "1793857115676190260",
+      "work_deadline": "1793864285767879777",
+      "challenge_duration": "3600000000000",
+      "state": "Open",
+      "accepted_at": null,
+      "refund_eligible_at": null,
+      "submissions": [],
+      "challenges": [],
+      "correction_deadline": null,
+      "refund_reason": null,
+      "transfer_attempt": "0",
+      "transfer_completed_at": null
+    },
+    "job_count": "2",
+    "verifier_nonce": "276295371000001"
+  },
+  "resume_004c": {
+    "block": {
+      "hash": "ZzfydtXppbFWbkMXQ2hHtt15FzRrEsu4WasP8TiLbfZ",
+      "height": 276740097,
+      "timestamp_nanosec": "1794119847136467818"
+    },
+    "job": {
+      "id": "1",
+      "customer": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+      "worker": "75b826f8ba2f37eb9431805f7a19659f0ecd81e7458eeefd42663b9365a67f55",
+      "escrow": "10000000000000000000000",
+      "storage_reserve": "163840000000000000000000",
+      "specification_hash": "6112127c82bc59c4d16b730bc0aaa4138f2969a02320cfecf0712333e8772200",
+      "created_at": "1794116033711314155",
+      "work_deadline": "1794123007578190698",
+      "challenge_duration": "3600000000000",
+      "state": "Verified",
+      "accepted_at": "1794116083881444285",
+      "refund_eligible_at": null,
+      "submissions": [
+        {
+          "artifact_hash": "41db277a79fb2579196eb99425c7e0de408665097e38c42c5d04459941704c2d",
+          "metadata": null,
+          "timestamp": "1794116162752605043",
+          "verification_deadline": "1794202562752605043",
+          "verification": {
+            "passed": true,
+            "evidence_hash": "0bb23e74882cb9542a063ebbd6e5bc99d62c35d6818079a39d57a834bce35156",
+            "timestamp": "1794116214060788948"
+          },
+          "challenge_end": "1794119814060788948"
+        }
+      ],
+      "challenges": [],
+      "correction_deadline": null,
+      "refund_reason": null,
+      "transfer_attempt": "0",
+      "transfer_completed_at": null
+    },
+    "accounts": {
+      "challenger": {
+        "amount": "1000000000000000000000000",
+        "block_hash": "ZzfydtXppbFWbkMXQ2hHtt15FzRrEsu4WasP8TiLbfZ",
+        "block_height": 276740097,
+        "code_hash": "11111111111111111111111111111111",
+        "locked": "0",
+        "storage_paid_at": 0,
+        "storage_usage": 182
+      },
+      "contract": {
+        "amount": "6317829966616053400000000",
+        "block_hash": "ZzfydtXppbFWbkMXQ2hHtt15FzRrEsu4WasP8TiLbfZ",
+        "block_height": 276740097,
+        "code_hash": "CuTHP5d4SUnkkVjUGn3b8UzBXkS2i8KABabNDrpZhKS8",
+        "locked": "0",
+        "storage_paid_at": 0,
+        "storage_usage": 168533
+      },
+      "customer": {
+        "amount": "651954192167818000000000",
+        "block_hash": "ZzfydtXppbFWbkMXQ2hHtt15FzRrEsu4WasP8TiLbfZ",
+        "block_height": 276740097,
+        "code_hash": "11111111111111111111111111111111",
+        "locked": "0",
+        "storage_paid_at": 0,
+        "storage_usage": 182
+      },
+      "verifier": {
+        "amount": "999812281188147200000000",
+        "block_hash": "ZzfydtXppbFWbkMXQ2hHtt15FzRrEsu4WasP8TiLbfZ",
+        "block_height": 276740097,
+        "code_hash": "11111111111111111111111111111111",
+        "locked": "0",
+        "storage_paid_at": 0,
+        "storage_usage": 182
+      },
+      "worker": {
+        "amount": "999628545051646400000000",
+        "block_hash": "ZzfydtXppbFWbkMXQ2hHtt15FzRrEsu4WasP8TiLbfZ",
+        "block_height": 276740097,
+        "code_hash": "11111111111111111111111111111111",
+        "locked": "0",
+        "storage_paid_at": 0,
+        "storage_usage": 182
+      }
+    },
+    "gas_price": "100000000",
+    "storage_byte_cost": "10000000000000000000",
+    "customer_nonce_before": "276299609000002",
+    "allocation_before_yocto": "6030775014976335000000000",
+    "remaining_fee_envelope_yocto": "611258313427226700000000",
+    "prior_stop": "RPC returned HTTP 429",
+    "order": [
+      {
+        "step": 5,
+        "lane": "A",
+        "method": "settle_job"
+      },
+      {
+        "step": 6,
+        "lane": "B",
+        "method": "create_job"
+      },
+      {
+        "step": 7,
+        "lane": "B",
+        "method": "accept_job"
+      },
+      {
+        "step": 8,
+        "lane": "B",
+        "method": "submit_work"
+      },
+      {
+        "step": 9,
+        "lane": "B",
+        "method": "attest_verification"
+      },
+      {
+        "step": 10,
+        "lane": "B",
+        "method": "open_challenge"
+      },
+      {
+        "step": 11,
+        "lane": "B",
+        "method": "resolve_challenge"
+      },
+      {
+        "step": 12,
+        "lane": "B",
+        "method": "refund_job"
+      }
+    ]
+  },
+  "challengeId": 0,
+  "challengeEvidenceHash": "44fc588e750315e40a7102c48b769ea42d67ba9d038221245d1688295dcad098",
+  "final": {
+    "block": {
+      "hash": "HcRX76qdPEyvwLCTpvDoW3sLub36ARdhZRKV6W38mqY1",
+      "height": 276741296,
+      "timestamp_nanosec": "1794120562966731327"
+    },
+    "accounts": {
+      "challenger": {
+        "amount": "999809293917396600000000",
+        "block_hash": "HcRX76qdPEyvwLCTpvDoW3sLub36ARdhZRKV6W38mqY1",
+        "block_height": 276741296,
+        "code_hash": "11111111111111111111111111111111",
+        "locked": "0",
+        "storage_paid_at": 0,
+        "storage_usage": 182
+      },
+      "contract": {
+        "amount": "6471669966616053400000000",
+        "block_hash": "HcRX76qdPEyvwLCTpvDoW3sLub36ARdhZRKV6W38mqY1",
+        "block_height": 276741296,
+        "code_hash": "CuTHP5d4SUnkkVjUGn3b8UzBXkS2i8KABabNDrpZhKS8",
+        "locked": "0",
+        "storage_paid_at": 0,
+        "storage_usage": 169330
+      },
+      "customer": {
+        "amount": "485469462656952500000000",
+        "block_hash": "HcRX76qdPEyvwLCTpvDoW3sLub36ARdhZRKV6W38mqY1",
+        "block_height": 276741296,
+        "code_hash": "11111111111111111111111111111111",
+        "locked": "0",
+        "storage_paid_at": 0,
+        "storage_usage": 182
+      },
+      "verifier": {
+        "amount": "999432393223921200000000",
+        "block_hash": "HcRX76qdPEyvwLCTpvDoW3sLub36ARdhZRKV6W38mqY1",
+        "block_height": 276741296,
+        "code_hash": "11111111111111111111111111111111",
+        "locked": "0",
+        "storage_paid_at": 0,
+        "storage_usage": 182
+      },
+      "worker": {
+        "amount": "1009257090103292800000000",
+        "block_hash": "HcRX76qdPEyvwLCTpvDoW3sLub36ARdhZRKV6W38mqY1",
+        "block_height": 276741296,
+        "code_hash": "11111111111111111111111111111111",
+        "locked": "0",
+        "storage_paid_at": 0,
+        "storage_usage": 182
+      }
+    },
+    "accounting": {
+      "unpaid_escrow": "10000000000000000000000",
+      "pending_transfers": "0",
+      "storage_reserves": "491520000000000000000000",
+      "total_paid": "10000000000000000000000",
+      "total_refunded": "10000000000000000000000"
+    },
+    "job0": {
+      "id": "0",
+      "customer": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+      "worker": null,
+      "escrow": "10000000000000000000000",
+      "storage_reserve": "163840000000000000000000",
+      "specification_hash": "22ef89f1100657c91dd5c36f583f192538825f6e1a8b3abb3942f3161faff342",
+      "created_at": "1793857115676190260",
+      "work_deadline": "1793864285767879777",
+      "challenge_duration": "3600000000000",
+      "state": "Open",
+      "accepted_at": null,
+      "refund_eligible_at": null,
+      "submissions": [],
+      "challenges": [],
+      "correction_deadline": null,
+      "refund_reason": null,
+      "transfer_attempt": "0",
+      "transfer_completed_at": null
+    }
+  }
+}

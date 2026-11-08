@@ -1,0 +1,63 @@
+{
+  "status": "STOPPED_BEFORE_SUBMISSION: conditional authorization signing gate failed",
+  "authorization": "Product-owner conditional authorization received for the frozen 23-transaction testnet plan only; no execution permitted until all five signing checks pass",
+  "network": "testnet",
+  "preflight_final_block": 276288888,
+  "contract_account": "writbound-escrow-20261105.testnet",
+  "contract_balance_testnet_NEAR": "10.000000000000000000000000",
+  "wasm_sha256": "b0e079d44375cda2baf0f242f5aa405d2c0cf158782b4817b9b0ce2284e30019",
+  "wasm_hash_matches": true,
+  "signing_access": {
+    "challenger": {
+      "account_id": "30314a0c731301037ddce5c1716f14a977bf69136345cf11b835880071e768f7",
+      "verified": false,
+      "reason": "No accessible credential at official NEAR testnet keychain entry"
+    },
+    "contract": {
+      "account_id": "writbound-escrow-20261105.testnet",
+      "verified": true,
+      "reason": "signature verified"
+    },
+    "customer": {
+      "account_id": "2abfc6c4576095958e51f373b77b30c03be80058a9b1fa60d701e153ee01ff1a",
+      "verified": false,
+      "reason": "No accessible credential at official NEAR testnet keychain entry"
+    },
+    "verifier": {
+      "account_id": "1a23e55459c7e0503df815a0aff749c9834a0c315552709cfaadd94630083929",
+      "verified": false,
+      "reason": "No accessible credential at official NEAR testnet keychain entry"
+    },
+    "worker": {
+      "account_id": "b265140f50d716b20d98d94ff2a4a9336c42cc52281fa124b952b16c4818bc60",
+      "verified": false,
+      "reason": "No accessible credential at official NEAR testnet keychain entry"
+    }
+  },
+  "budget": {
+    "funding_available_NEAR": "10",
+    "activation_transfers_NEAR": "4",
+    "code_storage_only_estimate_NEAR": "1.67353",
+    "two_customer_job_deposits_NEAR": "0.34768 (paid from customer 1-NEAR allocation; not additional source funding)",
+    "planned_function_gas_at_snapshot_NEAR": "0.225",
+    "conservative_function_gas_envelope_NEAR": "0.57",
+    "implicit_creation_charge_estimate_NEAR": "0.028",
+    "overall_fee_headroom_NEAR": "1",
+    "planning_assessment": "10 NEAR covers the approved allocation at the checked rates. Storage/action overhead is additional to code-byte estimate; sufficient headroom remains. No fee was actually charged; no transaction execution permitted because the signing gate failed."
+  },
+  "agent_transactions_submitted": 0,
+  "transaction_hashes": [],
+  "explorer_links": [],
+  "expected_rejected_transactions_executed": 0,
+  "unexpected_onchain_failures": 0,
+  "actual_preflight_failure": "Four role credentials unavailable in the official NEAR testnet OS keychain. This is a preflight failure, not one of the six approved expected rejected onchain checks.",
+  "deployment": "not attempted; account has empty code hash",
+  "happy_path": "not executed",
+  "challenge_refund_path": "not executed",
+  "seeded_false_positive": "prepared labelled fixture only; no attestation submitted",
+  "role_account_balances": "UNKNOWN_ACCOUNT at the checked final block; not active zero-balance accounts",
+  "phase2_recommendation": "Do not close; deployment pending local signing readiness and successful authorized runtime verification",
+  "phase3_started": false,
+  "private_keys_printed_or_saved_to_report": false,
+  "next_step": "User configures/imports existing role credentials through supported local wallet/keychain UI. Do not send private keys/seed phrases in chat. Verify all five signatures and rerun fresh budget/hash/permissions checks before any future authorized submission; reapproval required for any material plan/identity change."
+}

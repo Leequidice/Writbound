@@ -1,0 +1,79 @@
+     Locking 56 packages to highest compatible versions
+      Adding generic-array v0.14.7 (available: v0.14.9)
+   Compiling version_check v0.9.5
+   Compiling typenum v1.20.1
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.27
+   Compiling semver v1.0.28
+   Compiling windows_x86_64_msvc v0.53.1
+   Compiling zeroize v1.9.1
+   Compiling serde_core v1.0.229
+   Compiling rustc_version v0.4.1
+   Compiling generic-array v0.14.7
+   Compiling cpufeatures v0.2.17
+   Compiling cfg-if v1.0.5
+   Compiling zmij v1.0.23
+   Compiling subtle v2.6.1
+   Compiling serde_json v1.0.154
+   Compiling curve25519-dalek v4.1.3
+   Compiling signature v2.2.0
+   Compiling windows-targets v0.53.5
+   Compiling ed25519 v2.2.3
+   Compiling windows-sys v0.60.2
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling log v0.4.35
+   Compiling block-buffer v0.10.4
+   Compiling crypto-common v0.1.7
+   Compiling syn v2.0.119
+   Compiling digest v0.10.7
+   Compiling byteorder v1.5.0
+   Compiling bs58 v0.5.1
+   Compiling sha2 v0.10.9
+   Compiling keyring v3.6.3
+   Compiling curve25519-dalek-derive v0.1.1
+   Compiling ed25519-dalek v2.2.0
+   Compiling writbound-signing-readiness v0.1.0 (C:\Users\USER\Downloads\Hackathons\WritBound\.tools\signing-check)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 16.37s
+     Running `.tools\signing-check\target\debug\writbound-signing-readiness.exe`
+{
+  "all_five_verified": false,
+  "network": "testnet",
+  "onchain_transactions_submitted": 0,
+  "private_material_printed": false,
+  "results": {
+    "challenger": {
+      "account_id": "30314a0c731301037ddce5c1716f14a977bf69136345cf11b835880071e768f7",
+      "public_key": "ed25519:4F8AM8imz6p9cw64t8Jt9YVw1WNKBzZsLwos71YKADiN",
+      "reason": "No accessible credential at official NEAR testnet keychain entry",
+      "verified": false
+    },
+    "contract": {
+      "account_id": "writbound-escrow-20261105.testnet",
+      "method": "local OS keychain, in-memory Ed25519 sign/verify of domain-separated offchain challenge",
+      "public_key": "ed25519:EfjHfxMYbW565rUaiAextpLMqEDhjYsLHDk3j37eSMn7",
+      "reason": "signature verified",
+      "verified": true
+    },
+    "customer": {
+      "account_id": "2abfc6c4576095958e51f373b77b30c03be80058a9b1fa60d701e153ee01ff1a",
+      "public_key": "ed25519:3ssjRHJxhvE5cGZmFUQRQHaXCK4SGXizx9utSjXpDBEq",
+      "reason": "No accessible credential at official NEAR testnet keychain entry",
+      "verified": false
+    },
+    "verifier": {
+      "account_id": "1a23e55459c7e0503df815a0aff749c9834a0c315552709cfaadd94630083929",
+      "public_key": "ed25519:2m3M6uzSeEgq9pz4HCPU4Ks4fa76LMfbiC56v5iqdR1A",
+      "reason": "No accessible credential at official NEAR testnet keychain entry",
+      "verified": false
+    },
+    "worker": {
+      "account_id": "b265140f50d716b20d98d94ff2a4a9336c42cc52281fa124b952b16c4818bc60",
+      "public_key": "ed25519:D1NxwHp35cHXReW5xASyJvAZpP7Tyqg79543gnRAapKy",
+      "reason": "No accessible credential at official NEAR testnet keychain entry",
+      "verified": false
+    }
+  }
+}
+error: process didn't exit successfully: `.tools\signing-check\target\debug\writbound-signing-readiness.exe` (exit code: 3)

@@ -1,0 +1,15 @@
+{
+  "name": "writbound",
+  "private": true,
+  "workspaces": [
+    "apps/web",
+    "services/api"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev -w apps/web",
+    "dev:api": "npm run dev -w services/api",
+    "build": "npm run build --workspaces",
+    "test": "npm run test -w services/api",
+    "test:smoke": "node scripts/smoke.mjs"
+  }
+}

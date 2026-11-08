@@ -1,0 +1,28 @@
+{
+  "block_height": 276299586,
+  "block_hash": "HjSYaojGgZqCadAkdA3FCYHgWZhPCa1Hf4hkwRkjDuDC",
+  "timestamp_ns": "1793856618818698232",
+  "accounts": {
+    "challenger": null,
+    "contract": {
+      "amount": "8992885010462500000000000",
+      "block_hash": "HjSYaojGgZqCadAkdA3FCYHgWZhPCa1Hf4hkwRkjDuDC",
+      "block_height": 276299586,
+      "code_hash": "11111111111111111111111111111111",
+      "locked": "0",
+      "storage_paid_at": 0,
+      "storage_usage": 182
+    },
+    "customer": null,
+    "verifier": {
+      "amount": "1000000000000000000000000",
+      "block_hash": "HjSYaojGgZqCadAkdA3FCYHgWZhPCa1Hf4hkwRkjDuDC",
+      "block_height": 276299586,
+      "code_hash": "11111111111111111111111111111111",
+      "locked": "0",
+      "storage_paid_at": 0,
+      "storage_usage": 182
+    },
+    "worker": null
+  }
+}

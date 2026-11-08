@@ -1,0 +1,43 @@
+├  Unsigned transaction:
+│    signer_id:    7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9
+│    receiver_id:  writbound-escrow-20261105.testnet
+│    actions:
+│       -- function call:      
+│                       method name:  create_job
+│                       args:         {
+│                                       "challenge_duration": "3600000000000",
+│                                       "escrow": "10000000000000000000000",
+│                                       "specification_hash": "22ef89f1100657c91dd5c36f583f192538825f6e1a8b3abb3942f3161faff342",
+│                                       "work_deadline": "1793864285767879777"
+│                                     }
+│                       gas:          100.0 Tgas
+│                       deposit:      0.17384 NEAR
+│     
+├  Your transaction was signed successfully.
+│    Public key: ed25519:9GDewfDKRUMsuGLGCQbA8A9QPZDF4tsrQZLEzEqBFDMr
+│    Signature:  ed25519:5LxRCcrYEgwHoTwvkgpAW5wd33TJBKC7dYoyAyfgXLXg49Ndhhorn7L7YK68q1ZJVs2eTw3oyaXB8h6x7N9ThQSA
+│     
+├  Transaction Execution Info:
+│    Gas burned: 0.319 Tgas
+│    Transaction fee: 0.0000318025396435 NEAR
+│    Transaction ID: 9Y9PLxdGEm64BXQ2FcoBMGbPYeuP326F1j2Py9EBM43W
+│    To see the transaction in the transaction explorer, please open this url in your browser:
+│    https://explorer.testnet.near.org/transactions/9Y9PLxdGEm64BXQ2FcoBMGbPYeuP326F1j2Py9EBM43W
+│     
+├  Function execution logs:
+│    Logs [writbound-escrow-20261105.testnet]:   No logs
+│    Logs [7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9]:   No logs
+│     
+
+Function execution return value (printed to stdout):
+"0"
+
+
+The "create_job" call to <writbound-escrow-20261105.testnet> on behalf of <7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9> succeeded.
+
+
+
+
+Here is your console command if you need to script it or re-run:
+    'C:\Users\USER\Downloads\Hackathons\WritBound\.tools\near-cli\near-cli-rs-x86_64-pc-windows-msvc\near.exe' contract call-function as-transaction writbound-escrow-20261105.testnet create_job json-args '{"escrow":"10000000000000000000000","specification_hash":"22ef89f1100657c91dd5c36f583f192538825f6e1a8b3abb3942f3161faff342","work_deadline":"1793864285767879777","challenge_duration":"3600000000000"}' prepaid-gas '100.0 Tgas' attached-deposit '0.17384 NEAR' sign-as 7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9 network-config testnet sign-with-keychain --signer-public-key ed25519:9GDewfDKRUMsuGLGCQbA8A9QPZDF4tsrQZLEzEqBFDMr send
+

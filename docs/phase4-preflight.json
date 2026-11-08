@@ -1,0 +1,151 @@
+{
+  "network": "testnet",
+  "rpc": "https://archival-rpc.testnet.fastnear.com/",
+  "block": {
+    "hash": "TD13JyTSEZttYzKfuRnYALxpGCotTXDU1q56k8xAYiG",
+    "height": 276732069,
+    "timestamp_nanosec": "1794115091510390146"
+  },
+  "config": {
+    "contract": "writbound-escrow-20261105.testnet",
+    "verifier": "fcdcd131110d9310c74e6c340e114e92bd79044bbe049d275fadd7d6b3867831",
+    "version": "writbound-escrow-0.2.0",
+    "storage_quote": "163840000000000000000000",
+    "code_hash": "CuTHP5d4SUnkkVjUGn3b8UzBXkS2i8KABabNDrpZhKS8"
+  },
+  "roles": {
+    "challenger": "7b1828f1acfc0003b06abf0744f9dea35f53ad105f4e14a24b0901de5a99465f",
+    "contract": "writbound-escrow-20261105.testnet",
+    "customer": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+    "verifier": "fcdcd131110d9310c74e6c340e114e92bd79044bbe049d275fadd7d6b3867831",
+    "worker": "75b826f8ba2f37eb9431805f7a19659f0ecd81e7458eeefd42663b9365a67f55"
+  },
+  "accounts": {
+    "challenger": {
+      "amount": "1000000000000000000000000",
+      "block_hash": "TD13JyTSEZttYzKfuRnYALxpGCotTXDU1q56k8xAYiG",
+      "block_height": 276732069,
+      "code_hash": "11111111111111111111111111111111",
+      "locked": "0",
+      "storage_paid_at": 0,
+      "storage_usage": 182
+    },
+    "contract": {
+      "amount": "6143989966616053400000000",
+      "block_hash": "TD13JyTSEZttYzKfuRnYALxpGCotTXDU1q56k8xAYiG",
+      "block_height": 276732069,
+      "code_hash": "CuTHP5d4SUnkkVjUGn3b8UzBXkS2i8KABabNDrpZhKS8",
+      "locked": "0",
+      "storage_paid_at": 0,
+      "storage_usage": 168013
+    },
+    "customer": {
+      "amount": "825977552083909000000000",
+      "block_hash": "TD13JyTSEZttYzKfuRnYALxpGCotTXDU1q56k8xAYiG",
+      "block_height": 276732069,
+      "code_hash": "11111111111111111111111111111111",
+      "locked": "0",
+      "storage_paid_at": 0,
+      "storage_usage": 182
+    },
+    "verifier": {
+      "amount": "1000000000000000000000000",
+      "block_hash": "TD13JyTSEZttYzKfuRnYALxpGCotTXDU1q56k8xAYiG",
+      "block_height": 276732069,
+      "code_hash": "11111111111111111111111111111111",
+      "locked": "0",
+      "storage_paid_at": 0,
+      "storage_usage": 182
+    },
+    "worker": {
+      "amount": "1000000000000000000000000",
+      "block_hash": "TD13JyTSEZttYzKfuRnYALxpGCotTXDU1q56k8xAYiG",
+      "block_height": 276732069,
+      "code_hash": "11111111111111111111111111111111",
+      "locked": "0",
+      "storage_paid_at": 0,
+      "storage_usage": 182
+    }
+  },
+  "job0": {
+    "id": "0",
+    "customer": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+    "worker": null,
+    "escrow": "10000000000000000000000",
+    "storage_reserve": "163840000000000000000000",
+    "specification_hash": "22ef89f1100657c91dd5c36f583f192538825f6e1a8b3abb3942f3161faff342",
+    "created_at": "1793857115676190260",
+    "work_deadline": "1793864285767879777",
+    "challenge_duration": "3600000000000",
+    "state": "Open",
+    "accepted_at": null,
+    "refund_eligible_at": null,
+    "submissions": [],
+    "challenges": [],
+    "correction_deadline": null,
+    "refund_reason": null,
+    "transfer_attempt": "0",
+    "transfer_completed_at": null
+  },
+  "accounting": {
+    "unpaid_escrow": "10000000000000000000000",
+    "pending_transfers": "0",
+    "storage_reserves": "163840000000000000000000",
+    "total_paid": "0",
+    "total_refunded": "0"
+  },
+  "gas_price": "100000000",
+  "storage_byte_cost": "10000000000000000000",
+  "historical_receipt_query": {
+    "hash": "9Y9PLxdGEm64BXQ2FcoBMGbPYeuP326F1j2Py9EBM43W",
+    "finality": "FINAL",
+    "receipts": 2
+  },
+  "commitments": {
+    "cleaned.csv": "41db277a79fb2579196eb99425c7e0de408665097e38c42c5d04459941704c2d",
+    "input.csv": "4586840fefb1f6b691cdc3753d9193701cdb2da8f56b6c0da58ff8915de4e99b",
+    "task-spec.json": "6112127c82bc59c4d16b730bc0aaa4138f2969a02320cfecf0712333e8772200",
+    "verification.json": "580570d6c797f57704a30d1cc9e7c7dc8aa1b3bb86d2649b4cfcaaba6c6d1b8e",
+    "defective-fixture.csv": "132f5e6720257a9dbed84902cb8e0845adf4db2d9aa04f9799ba0f748b2a08da",
+    "challenge-evidence.json": "9b587d3dd48c72feef7cb2e18b183ea035de4e2a201948299568a7fefeea0d5b"
+  },
+  "creation_sample": {
+    "network": "testnet",
+    "method": "create_job",
+    "signer": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+    "receiver": "writbound-escrow-20261105.testnet",
+    "args": {
+      "escrow": "10000000000000000000000",
+      "specification_hash": "6112127c82bc59c4d16b730bc0aaa4138f2969a02320cfecf0712333e8772200",
+      "work_deadline": "1794122291510390146",
+      "challenge_duration": "3600000000000"
+    },
+    "gas": "100000000000000",
+    "deposit": "173840000000000000000000",
+    "mode": "success"
+  },
+  "cleanup_expire": {
+    "network": "testnet",
+    "method": "expire_job",
+    "signer": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+    "receiver": "writbound-escrow-20261105.testnet",
+    "args": {
+      "job_id": "0"
+    },
+    "gas": "100000000000000",
+    "deposit": "0",
+    "mode": "cleanup"
+  },
+  "challenge_duration_ns": "3600000000000",
+  "budget": {
+    "cap_yocto": "7000000000000000000000000",
+    "allocated_including_fees_yocto": "6030032481300037600000000",
+    "existing_fees_yocto": "30032481300037600000000",
+    "remaining_yocto": "969967518699962400000000",
+    "two_new_deposits_yocto": "347680000000000000000000",
+    "customer_fee_envelope_yocto": "221258313427226700000000",
+    "gas_at_snapshot_price_yocto": "155000000000000000000000",
+    "conservative_remaining_fee_envelope_yocto": "611258313427226700000000",
+    "projected_max_allocation_yocto": "6641290794727264300000000"
+  }
+}

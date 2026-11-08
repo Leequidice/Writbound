@@ -1,0 +1,61 @@
+{
+  "checked_at_utc": "2026-11-05T03:27:35.911Z",
+  "rpc": "https://rpc.testnet.near.org",
+  "chain_id": "testnet",
+  "block_hash": "9Aax67zHZRx8wkdGcADdwPHJhcYZfEQqcmEPLN1KiLvu",
+  "block_height": 276287121,
+  "block_timestamp_ns": "1793849235040477220",
+  "protocol_version": 88,
+  "artifact": {
+    "path": "contracts/writbound-escrow/target/near/writbound_escrow.wasm",
+    "bytes": 167353,
+    "sha256": "b0e079d44375cda2baf0f242f5aa405d2c0cf158782b4817b9b0ce2284e30019",
+    "code_hash_base58": "CuTHP5d4SUnkkVjUGn3b8UzBXkS2i8KABabNDrpZhKS8"
+  },
+  "storage_amount_per_byte_yocto": "10000000000000000000",
+  "job_storage_reserve_near": "0.163840000000000000000000",
+  "escrow_per_job_near": "0.010000000000000000000000",
+  "exact_deposit_per_job_near": "0.173840000000000000000000",
+  "two_job_customer_deposit_near": "0.347680000000000000000000",
+  "wasm_code_storage_only_estimate_near": "1.673530000000000000000000",
+  "gas_price_yocto_per_gas": "100000000",
+  "illustrative_150_tgas_prepaid_cost_near": "0.015000000000000000000000",
+  "planned_2250_tgas_function_prepaid_budget_near": "0.225000000000000000000000",
+  "conservative_19_transaction_300_tgas_function_gas_budget_near": "0.570000000000000000000000",
+  "fee_note": "Function gas budget at snapshot price only; action/deploy fees and future prices vary. No transaction was signed or broadcast.",
+  "accounts": {
+    "contract": {
+      "account_id": "writbound-escrow-20261105.testnet",
+      "status": "not created (UNKNOWN_ACCOUNT)",
+      "balance_near": null,
+      "error": "Error: {\"name\":\"HANDLER_ERROR\",\"cause\":{\"info\":{\"block_hash\":\"9Aax67zHZRx8wkdGcADdwPHJhcYZfEQqcmEPLN1KiLvu\",\"block_height\":276287121,\"requested_account_id\":\"writbound-escrow-20261105.testnet\"},\"name\":\"UNKNOWN_ACCOUNT\"},\"code\":-32000,\"message\":\"Server error\",\"data\":\"account writbound-escrow-20261105.testnet does not exist while viewing\"}"
+    },
+    "verifier": {
+      "account_id": "writbound-verifier-20261105.testnet",
+      "status": "not created (UNKNOWN_ACCOUNT)",
+      "balance_near": null,
+      "error": "Error: {\"name\":\"HANDLER_ERROR\",\"cause\":{\"info\":{\"block_hash\":\"9Aax67zHZRx8wkdGcADdwPHJhcYZfEQqcmEPLN1KiLvu\",\"block_height\":276287121,\"requested_account_id\":\"writbound-verifier-20261105.testnet\"},\"name\":\"UNKNOWN_ACCOUNT\"},\"code\":-32000,\"message\":\"Server error\",\"data\":\"account writbound-verifier-20261105.testnet does not exist while viewing\"}"
+    },
+    "customer": {
+      "account_id": "writbound-customer-20261105.testnet",
+      "status": "not created (UNKNOWN_ACCOUNT)",
+      "balance_near": null,
+      "error": "Error: {\"name\":\"HANDLER_ERROR\",\"cause\":{\"info\":{\"block_hash\":\"9Aax67zHZRx8wkdGcADdwPHJhcYZfEQqcmEPLN1KiLvu\",\"block_height\":276287121,\"requested_account_id\":\"writbound-customer-20261105.testnet\"},\"name\":\"UNKNOWN_ACCOUNT\"},\"code\":-32000,\"message\":\"Server error\",\"data\":\"account writbound-customer-20261105.testnet does not exist while viewing\"}"
+    },
+    "worker": {
+      "account_id": "writbound-worker-20261105.testnet",
+      "status": "not created (UNKNOWN_ACCOUNT)",
+      "balance_near": null,
+      "error": "Error: {\"name\":\"HANDLER_ERROR\",\"cause\":{\"info\":{\"block_hash\":\"9Aax67zHZRx8wkdGcADdwPHJhcYZfEQqcmEPLN1KiLvu\",\"block_height\":276287121,\"requested_account_id\":\"writbound-worker-20261105.testnet\"},\"name\":\"UNKNOWN_ACCOUNT\"},\"code\":-32000,\"message\":\"Server error\",\"data\":\"account writbound-worker-20261105.testnet does not exist while viewing\"}"
+    },
+    "challenger": {
+      "account_id": "writbound-challenger-20261105.testnet",
+      "status": "not created (UNKNOWN_ACCOUNT)",
+      "balance_near": null,
+      "error": "Error: {\"name\":\"HANDLER_ERROR\",\"cause\":{\"info\":{\"block_hash\":\"9Aax67zHZRx8wkdGcADdwPHJhcYZfEQqcmEPLN1KiLvu\",\"block_height\":276287121,\"requested_account_id\":\"writbound-challenger-20261105.testnet\"},\"name\":\"UNKNOWN_ACCOUNT\"},\"code\":-32000,\"message\":\"Server error\",\"data\":\"account writbound-challenger-20261105.testnet does not exist while viewing\"}"
+    }
+  },
+  "transactions_executed": 0,
+  "account_selection": "suggested names only; not selected or owned",
+  "approval": "not granted for execution"
+}

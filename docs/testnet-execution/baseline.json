@@ -1,0 +1,20 @@
+{
+  "block_height": 276294638,
+  "block_hash": "5B3HJUm7nGFGAR7rpMRQrbMuzVpgCeV5SGZh4St7ynJ2",
+  "timestamp_ns": "1793853694103356652",
+  "accounts": {
+    "challenger": null,
+    "contract": {
+      "amount": "10000000000000000000000000",
+      "block_hash": "5B3HJUm7nGFGAR7rpMRQrbMuzVpgCeV5SGZh4St7ynJ2",
+      "block_height": 276294638,
+      "code_hash": "11111111111111111111111111111111",
+      "locked": "0",
+      "storage_paid_at": 0,
+      "storage_usage": 182
+    },
+    "customer": null,
+    "verifier": null,
+    "worker": null
+  }
+}

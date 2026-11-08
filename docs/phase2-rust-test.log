@@ -1,0 +1,62 @@
+   Compiling writbound-escrow v0.1.0 (C:\Users\USER\Downloads\Hackathons\WritBound\contracts\writbound-escrow)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.47s
+     Running unittests src\lib.rs (target\debug\deps\writbound_escrow-28ba35137138eb56.exe)
+
+running 48 tests
+test tests::bounded_metadata_and_no_resubmission ... ok
+test tests::closed_jobs_cannot_reenter_workflow ... ok
+test tests::callback_private_and_replay_safe ... ok
+test tests::challenge_timeout_deterministic_refund ... ok
+test tests::challenge_timeout_cannot_be_bypassed_by_resolving_another ... ok
+test tests::all_challenges_must_resolve ... ok
+test tests::challenge_duplicates_and_count_bounded ... ok
+test tests::correction_resubmission_reverifies_and_cannot_loop ... ok
+test tests::customer_cancels_only_unaccepted_job ... ok
+test tests::initialization_cannot_be_front_run ... ok
+test tests::customer_verifier_and_contract_cannot_work ... ok
+test tests::correction_timeout_refunds ... ok
+test tests::invalid_deadline_bounds ... ok
+test tests::initialization_rejects_self_verifier_and_non_testnet_name ... ok
+test tests::failed_refund_preserves_customer_claim ... ok
+test tests::duplicate_settlement_and_refund_rejected ... ok
+test tests::failed_worker_transfer_preserves_claim_and_retry ... ok
+test tests::paginated_queries_and_unknown_ids ... ok
+test tests::insufficient_liquidity_does_not_erase_claim ... ok
+test tests::invalid_and_late_challenges ... ok
+test tests::invalid_funding_and_hashes ... ok
+test tests::minimum_callback_gas_enforced ... ok
+test tests::rejected_verification_refunds ... ok
+test tests::multiple_job_liabilities_are_isolated ... ok
+test tests::payout_receipts_fix_amount_recipient_and_callback_gas ... ok
+test tests::participants_cannot_challenge ... ok
+test tests::rejected_challenge_allows_settlement ... ok
+test tests::settlement_at_boundary_and_callback_succeeds ... ok
+test tests::settlement_before_deadline_rejected ... ok
+test tests::timestamp_overflow_rejected_before_funding ... ok
+test tests::storage_is_never_worker_payment ... ok
+test tests::successful_verification_and_immutable_attestation ... ok
+test tests::successful_callback_with_data_does_not_restore_claim ... ok
+test tests::unauthorized_submission_rejected ... ok
+test tests::third_party_challenge_blocks_settlement ... ok
+test tests::unauthorized_resolution_rejected ... ok
+test tests::valid_creation_and_queries ... ok
+test tests::unauthorized_verifier_rejected ... ok
+test tests::valid_challenge_can_refund_directly ... ok
+test tests::valid_submission_stores_commitment ... ok
+test tests::valid_challenge_enters_correction ... ok
+test tests::verifier_cannot_fund_job ... ok
+test tests::verification_timeout_is_permissionless ... ok
+test tests::verified_work_cannot_expire_arbitrarily ... ok
+test tests::work_cannot_submit_or_accept_at_deadline ... ok
+test tests::worker_accepts_once ... ok
+test tests::work_timeout_for_open_and_accepted ... ok
+test tests::worst_case_history_storage_and_callback_gas ... ok
+
+test result: ok. 48 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.96s
+
+   Doc-tests writbound_escrow
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

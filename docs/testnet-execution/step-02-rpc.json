@@ -1,0 +1,162 @@
+{
+  "final_execution_status": "FINAL",
+  "receipts": [
+    {
+      "predecessor_id": "writbound-escrow-20261105.testnet",
+      "priority": 0,
+      "receipt": {
+        "Action": {
+          "actions": [
+            {
+              "Transfer": {
+                "deposit": "1000000000000000000000000"
+              }
+            }
+          ],
+          "gas_price": "1000000000",
+          "input_data_ids": [],
+          "is_promise_yield": false,
+          "output_data_receivers": [],
+          "signer_id": "writbound-escrow-20261105.testnet",
+          "signer_public_key": "ed25519:EfjHfxMYbW565rUaiAextpLMqEDhjYsLHDk3j37eSMn7"
+        }
+      },
+      "receipt_id": "B17kWy8Uzxu6sfqVhFXNwLqZVebSoujJB6CkyzJAWgsQ",
+      "receiver_id": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9"
+    },
+    {
+      "predecessor_id": "system",
+      "priority": 0,
+      "receipt": {
+        "Action": {
+          "actions": [
+            {
+              "Transfer": {
+                "deposit": "492452918750000000000"
+              }
+            }
+          ],
+          "gas_price": "0",
+          "input_data_ids": [],
+          "is_promise_yield": false,
+          "output_data_receivers": [],
+          "signer_id": "writbound-escrow-20261105.testnet",
+          "signer_public_key": "ed25519:EfjHfxMYbW565rUaiAextpLMqEDhjYsLHDk3j37eSMn7"
+        }
+      },
+      "receipt_id": "CB71jekJfhD8NjwGPWwr653UPetGEtMM2zSvcBYYUZgE",
+      "receiver_id": "writbound-escrow-20261105.testnet"
+    }
+  ],
+  "receipts_outcome": [
+    {
+      "block_hash": "ACqBx4LPNp7VdKyHe4tQci7ZF1f3dnB6QQ5P8ZMK61xQ",
+      "id": "B17kWy8Uzxu6sfqVhFXNwLqZVebSoujJB6CkyzJAWgsQ",
+      "outcome": {
+        "executor_id": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+        "gas_burnt": 7524947687500,
+        "logs": [],
+        "metadata": {
+          "contracts": [
+            null
+          ],
+          "gas_profile": [],
+          "version": 4
+        },
+        "receipt_ids": [
+          "CB71jekJfhD8NjwGPWwr653UPetGEtMM2zSvcBYYUZgE"
+        ],
+        "status": {
+          "SuccessValue": ""
+        },
+        "tokens_burnt": "7032494768750000000000"
+      },
+      "proof": [
+        {
+          "direction": "Left",
+          "hash": "DTBjLJFi3mLvkQcQkSTxuEfND1AcWaAbzD9DSiUGDCPv"
+        }
+      ]
+    },
+    {
+      "block_hash": "HFb4TrGrqXXJP8dkhuyH8LtXXXouqVkbFJGD2GEXApHq",
+      "id": "CB71jekJfhD8NjwGPWwr653UPetGEtMM2zSvcBYYUZgE",
+      "outcome": {
+        "executor_id": "writbound-escrow-20261105.testnet",
+        "gas_burnt": 223182562500,
+        "logs": [],
+        "metadata": {
+          "contracts": [
+            null
+          ],
+          "gas_profile": [],
+          "version": 4
+        },
+        "receipt_ids": [],
+        "status": {
+          "SuccessValue": ""
+        },
+        "tokens_burnt": "0"
+      },
+      "proof": [
+        {
+          "direction": "Right",
+          "hash": "CtN8qSreH42tdwWdQXJ1pNQ6nyESxmV6eG9kFGn4eXBK"
+        },
+        {
+          "direction": "Right",
+          "hash": "7oQQqd1wnKAWCpkpn1uh6CgQGFohLfcatD6UdgWoZdtx"
+        }
+      ]
+    }
+  ],
+  "status": {
+    "SuccessValue": ""
+  },
+  "transaction": {
+    "actions": [
+      {
+        "Transfer": {
+          "deposit": "1000000000000000000000000"
+        }
+      }
+    ],
+    "hash": "8hjkjR2AHmU6DPWA9kiZiUXYHJpGng3RgbrzBgKz35BF",
+    "nonce": 276287794000002,
+    "priority_fee": 0,
+    "public_key": "ed25519:EfjHfxMYbW565rUaiAextpLMqEDhjYsLHDk3j37eSMn7",
+    "receiver_id": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+    "signature": "ed25519:NYC3YETT9rEYX2Lj2mTc5VzjUQA9xs48bvYidsG6cvHopDimcXv9DtUVrcQfJ93eaTGCygUabkKrWCVNygM1HRq",
+    "signer_id": "writbound-escrow-20261105.testnet"
+  },
+  "transaction_outcome": {
+    "block_hash": "5vGuDApSAned8qyibYSHuRQEbzuDFD8qK38wGP8LqguD",
+    "id": "8hjkjR2AHmU6DPWA9kiZiUXYHJpGng3RgbrzBgKz35BF",
+    "outcome": {
+      "executor_id": "writbound-escrow-20261105.testnet",
+      "gas_burnt": 824947687500,
+      "logs": [],
+      "metadata": {
+        "gas_profile": null,
+        "version": 1
+      },
+      "receipt_ids": [
+        "B17kWy8Uzxu6sfqVhFXNwLqZVebSoujJB6CkyzJAWgsQ"
+      ],
+      "status": {
+        "SuccessReceiptId": "B17kWy8Uzxu6sfqVhFXNwLqZVebSoujJB6CkyzJAWgsQ"
+      },
+      "tokens_burnt": "82494768750000000000"
+    },
+    "proof": [
+      {
+        "direction": "Right",
+        "hash": "4QCbwUpUvrCKz2hhhDspbVRn95AsYwpgYBDAdjdsDsqS"
+      },
+      {
+        "direction": "Right",
+        "hash": "3TPSLqvWTEqtPo5girE2oCtVaLaeDnEzdSiCqwtqohCg"
+      }
+    ]
+  }
+}

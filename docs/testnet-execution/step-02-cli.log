@@ -1,0 +1,27 @@
+├  Unsigned transaction:
+│    signer_id:    writbound-escrow-20261105.testnet
+│    receiver_id:  7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9
+│    actions:
+│       -- transfer deposit:    1 NEAR
+│     
+├  Your transaction was signed successfully.
+│    Public key: ed25519:EfjHfxMYbW565rUaiAextpLMqEDhjYsLHDk3j37eSMn7
+│    Signature:  ed25519:NYC3YETT9rEYX2Lj2mTc5VzjUQA9xs48bvYidsG6cvHopDimcXv9DtUVrcQfJ93eaTGCygUabkKrWCVNygM1HRq
+│     
+├  Transaction Execution Info:
+│    Gas burned: 0.825 Tgas
+│    Transaction fee: 0.00008249476875 NEAR
+│    Transaction ID: 8hjkjR2AHmU6DPWA9kiZiUXYHJpGng3RgbrzBgKz35BF
+│    To see the transaction in the transaction explorer, please open this url in your browser:
+│    https://explorer.testnet.near.org/transactions/8hjkjR2AHmU6DPWA9kiZiUXYHJpGng3RgbrzBgKz35BF
+│     
+
+
+<writbound-escrow-20261105.testnet> has transferred 1 NEAR to <7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9> successfully.
+
+
+
+
+Here is your console command if you need to script it or re-run:
+    'C:\Users\USER\Downloads\Hackathons\WritBound\.tools\near-cli\near-cli-rs-x86_64-pc-windows-msvc\near.exe' transaction construct-transaction writbound-escrow-20261105.testnet receiver-id 7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9 add-action transfer '1 NEAR' skip network-config testnet sign-with-keychain --signer-public-key ed25519:EfjHfxMYbW565rUaiAextpLMqEDhjYsLHDk3j37eSMn7 send
+

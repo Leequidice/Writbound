@@ -1,0 +1,82 @@
+   Compiling version_check v0.9.5
+   Compiling typenum v1.20.1
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.27
+   Compiling windows_x86_64_msvc v0.53.1
+   Compiling semver v1.0.28
+   Compiling cfg-if v1.0.5
+   Compiling cpufeatures v0.2.17
+   Compiling zmij v1.0.23
+   Compiling zeroize v1.9.1
+   Compiling generic-array v0.14.7
+   Compiling rustc_version v0.4.1
+   Compiling serde_core v1.0.229
+   Compiling subtle v2.6.1
+   Compiling windows-targets v0.53.5
+   Compiling signature v2.2.0
+   Compiling serde_json v1.0.154
+   Compiling windows-sys v0.60.2
+   Compiling ed25519 v2.2.3
+   Compiling getrandom v0.2.17
+   Compiling curve25519-dalek v4.1.3
+   Compiling byteorder v1.5.0
+   Compiling log v0.4.35
+   Compiling crypto-common v0.1.7
+   Compiling block-buffer v0.10.4
+   Compiling itoa v1.0.18
+   Compiling syn v2.0.119
+   Compiling digest v0.10.7
+   Compiling memchr v2.8.3
+   Compiling rand_core v0.6.4
+   Compiling bs58 v0.5.1
+   Compiling sha2 v0.10.9
+   Compiling keyring v3.6.3
+   Compiling curve25519-dalek-derive v0.1.1
+   Compiling ed25519-dalek v2.2.0
+   Compiling writbound-signing-readiness v0.1.0 (C:\Users\USER\Downloads\Hackathons\WritBound\scripts\signing-readiness)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 13.23s
+     Running `scripts\signing-readiness\target\debug\writbound-signing-readiness.exe --check-replacements`
+{
+  "all_five_verified": true,
+  "network": "testnet",
+  "onchain_transactions_submitted": 0,
+  "private_material_printed": false,
+  "results": {
+    "challenger": {
+      "account_id": "7b1828f1acfc0003b06abf0744f9dea35f53ad105f4e14a24b0901de5a99465f",
+      "method": "local OS keychain, in-memory Ed25519 sign/verify of domain-separated offchain challenge",
+      "public_key": "ed25519:9HWWp5nbU3Htr3XedmBab18Ugkgp1xYV8ZPEoBipAxhU",
+      "reason": "signature verified",
+      "verified": true
+    },
+    "contract": {
+      "account_id": "writbound-escrow-20261105.testnet",
+      "method": "local OS keychain, in-memory Ed25519 sign/verify of domain-separated offchain challenge",
+      "public_key": "ed25519:EfjHfxMYbW565rUaiAextpLMqEDhjYsLHDk3j37eSMn7",
+      "reason": "signature verified",
+      "verified": true
+    },
+    "customer": {
+      "account_id": "7ac384032504d793e733f0210f5ee39518adb0db92dbc95ed9001b7af08cebf9",
+      "method": "local OS keychain, in-memory Ed25519 sign/verify of domain-separated offchain challenge",
+      "public_key": "ed25519:9GDewfDKRUMsuGLGCQbA8A9QPZDF4tsrQZLEzEqBFDMr",
+      "reason": "signature verified",
+      "verified": true
+    },
+    "verifier": {
+      "account_id": "fcdcd131110d9310c74e6c340e114e92bd79044bbe049d275fadd7d6b3867831",
+      "method": "local OS keychain, in-memory Ed25519 sign/verify of domain-separated offchain challenge",
+      "public_key": "ed25519:J252qTj1Q7RS8CN8a1L96LmtoKqSfiDa8QJa2nrzdCqv",
+      "reason": "signature verified",
+      "verified": true
+    },
+    "worker": {
+      "account_id": "75b826f8ba2f37eb9431805f7a19659f0ecd81e7458eeefd42663b9365a67f55",
+      "method": "local OS keychain, in-memory Ed25519 sign/verify of domain-separated offchain challenge",
+      "public_key": "ed25519:8vXZpNbQrcjhp2Dp4EBBYtrnNvHoF35bXWWhnpCQmmb2",
+      "reason": "signature verified",
+      "verified": true
+    }
+  }
+}

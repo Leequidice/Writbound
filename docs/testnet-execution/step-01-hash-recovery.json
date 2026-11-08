@@ -1,0 +1,40 @@
+{
+  "scope": "read-only bounded binary search of public source balance changes; no broadcasts",
+  "rpc": "https://archival-rpc.testnet.fastnear.com/",
+  "start": 276295339,
+  "end": 276295508,
+  "first_changed_block": 276295371,
+  "lookups": [
+    {
+      "height": 276295423,
+      "amount": "8992885010462500000000000"
+    },
+    {
+      "height": 276295381,
+      "amount": "8992885010462500000000000"
+    },
+    {
+      "height": 276295360,
+      "amount": "10000000000000000000000000"
+    },
+    {
+      "height": 276295371,
+      "amount": "8992392557543750000000000"
+    },
+    {
+      "height": 276295366,
+      "amount": "10000000000000000000000000"
+    },
+    {
+      "height": 276295369,
+      "amount": "10000000000000000000000000"
+    },
+    {
+      "height": 276295370,
+      "amount": "10000000000000000000000000"
+    }
+  ],
+  "matching_hashes": [
+    "BaQ9x4MaQdatz4cv9KajgYLPrTtqbAQmUmMXBPkEj71H"
+  ]
+}

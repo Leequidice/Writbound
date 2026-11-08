@@ -1,0 +1,4 @@
+# Keep published demo commitments byte-for-byte across Windows checkouts.
+docs/phase3-demo/** -text
+docs/testnet-transaction-plan.final-approval.json -text
+docs/PHASE4_APPROVAL.md -text
