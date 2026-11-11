@@ -1,0 +1,5 @@
+[
+  {"id":"A1","name":"Alice","tier":"standard","score":80},
+  {"id":"A1","name":"","tier":"legacy","score":105},
+  {"id":"A3","tier":"premium","score":"90"}
+]

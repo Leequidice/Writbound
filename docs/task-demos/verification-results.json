@@ -1,0 +1,257 @@
+{
+  "csv": {
+    "job": "9240d92440b94df8a8d9e4e93a210628",
+    "spec": {
+      "fill_missing": {
+        "team": "Unassigned"
+      },
+      "input_sha256": "4586840fefb1f6b691cdc3753d9193701cdb2da8f56b6c0da58ff8915de4e99b",
+      "normalize_column_names": true,
+      "remove_duplicates": true,
+      "remove_empty_rows": true,
+      "schema_version": 1,
+      "trim_whitespace": true
+    },
+    "run": {
+      "artifact_sha256": "41db277a79fb2579196eb99425c7e0de408665097e38c42c5d04459941704c2d",
+      "errors": [],
+      "inference": {
+        "generated_tokens": 37,
+        "model": "qwen2.5:3b",
+        "ollama_duration_ns": 18636129500,
+        "wall_ms": 18654
+      },
+      "input_rows": 5,
+      "input_sha256": "4586840fefb1f6b691cdc3753d9193701cdb2da8f56b6c0da58ff8915de4e99b",
+      "job_id": "9240d92440b94df8a8d9e4e93a210628",
+      "operations": [
+        "normalize_column_names",
+        "trim_whitespace",
+        "remove_empty_rows",
+        "fill_missing",
+        "remove_duplicates"
+      ],
+      "output_rows": 3,
+      "status": "succeeded"
+    },
+    "verified": {
+      "artifact_sha256": "41db277a79fb2579196eb99425c7e0de408665097e38c42c5d04459941704c2d",
+      "expected_sha256": "41db277a79fb2579196eb99425c7e0de408665097e38c42c5d04459941704c2d",
+      "input_sha256": "4586840fefb1f6b691cdc3753d9193701cdb2da8f56b6c0da58ff8915de4e99b",
+      "job_id": "9240d92440b94df8a8d9e4e93a210628",
+      "mismatch": null,
+      "passed": true,
+      "specification_sha256": "6112127c82bc59c4d16b730bc0aaa4138f2969a02320cfecf0712333e8772200",
+      "suite": "writbound-csv-v1"
+    },
+    "rejected": {
+      "artifact_sha256": "132f5e6720257a9dbed84902cb8e0845adf4db2d9aa04f9799ba0f748b2a08da",
+      "expected_sha256": "41db277a79fb2579196eb99425c7e0de408665097e38c42c5d04459941704c2d",
+      "input_sha256": "4586840fefb1f6b691cdc3753d9193701cdb2da8f56b6c0da58ff8915de4e99b",
+      "job_id": "9240d92440b94df8a8d9e4e93a210628",
+      "mismatch": {
+        "actual": {
+          "cells": [
+            "003",
+            "Chidi",
+            "Blue"
+          ],
+          "sha256": "2a4d8040c7c2dd4f2ee576931ac8a3190dd55f2946fd83ecbf8552e19ebf2c33"
+        },
+        "actual_count": 2,
+        "data_row": 2,
+        "expected": {
+          "cells": [
+            "002",
+            "Bob",
+            "Unassigned"
+          ],
+          "sha256": "7119e90c8869edcf8e7ca6eeab5160dbde4a1ea1c0f05968da015ff3ff5979a3"
+        },
+        "expected_count": 3,
+        "kind": "row_mismatch"
+      },
+      "passed": false,
+      "specification_sha256": "6112127c82bc59c4d16b730bc0aaa4138f2969a02320cfecf0712333e8772200",
+      "suite": "writbound-csv-v1"
+    }
+  },
+  "json_transform": {
+    "job": "d76a71b5de92407897be0f271d935f2a",
+    "spec": {
+      "schema_version": 1,
+      "task_type": "json_transform",
+      "input_sha256": "60c853b8058e2eaa591a77c40c5ac455bde08b4163f86bf083d423cdae6b91e8",
+      "rules": {
+        "rename_fields": {
+          "userId": "id"
+        },
+        "filter_records": {
+          "field": "active",
+          "operator": "eq",
+          "value": true
+        },
+        "normalize_strings": {
+          "name": "trim_lower",
+          "team": "trim_lower"
+        },
+        "fill_missing": {
+          "team": "unassigned"
+        },
+        "remove_fields": [
+          "notes"
+        ],
+        "select_fields": [
+          "id",
+          "name",
+          "team"
+        ]
+      }
+    },
+    "run": {
+      "artifact_sha256": "4b7875f03d6ab02d2e974d2bd988fc08f42db21e0d3258cff691744b7b3f719c",
+      "errors": [],
+      "inference": {
+        "generated_tokens": 40,
+        "model": "qwen2.5:3b",
+        "ollama_duration_ns": 9956913700,
+        "wall_ms": 10172
+      },
+      "input_rows": 3,
+      "input_sha256": "60c853b8058e2eaa591a77c40c5ac455bde08b4163f86bf083d423cdae6b91e8",
+      "job_id": "d76a71b5de92407897be0f271d935f2a",
+      "operations": [
+        "rename_fields",
+        "filter_records",
+        "normalize_strings",
+        "fill_missing",
+        "remove_fields",
+        "select_fields"
+      ],
+      "output_rows": 2,
+      "plan": {
+        "operations": [
+          "rename_fields",
+          "filter_records",
+          "normalize_strings",
+          "fill_missing",
+          "remove_fields",
+          "select_fields"
+        ]
+      },
+      "status": "succeeded",
+      "task_type": "json_transform"
+    },
+    "verified": {
+      "artifact_sha256": "4b7875f03d6ab02d2e974d2bd988fc08f42db21e0d3258cff691744b7b3f719c",
+      "expected_sha256": "4b7875f03d6ab02d2e974d2bd988fc08f42db21e0d3258cff691744b7b3f719c",
+      "job_id": "d76a71b5de92407897be0f271d935f2a",
+      "mismatch": null,
+      "passed": true,
+      "specification_sha256": "72c313518c543e0f064010ea8a9a51f55ee750c18db78e11c2d5bae172aff56d",
+      "task_type": "json_transform"
+    },
+    "rejected": {
+      "artifact_sha256": "7af8e488c7ba831172a47aa398bc664204bb9e0cedce6fbcb53102c4019223e0",
+      "expected_sha256": "4b7875f03d6ab02d2e974d2bd988fc08f42db21e0d3258cff691744b7b3f719c",
+      "job_id": "d76a71b5de92407897be0f271d935f2a",
+      "mismatch": {
+        "actual_text": "null",
+        "expected_text": "\"unassigned\"",
+        "kind": "json_mismatch",
+        "path": "$[1][\"team\"]"
+      },
+      "passed": false,
+      "specification_sha256": "72c313518c543e0f064010ea8a9a51f55ee750c18db78e11c2d5bae172aff56d",
+      "task_type": "json_transform"
+    }
+  },
+  "data_quality_audit": {
+    "job": "02f5a01951e24e1ca0850f0a7170abe3",
+    "spec": {
+      "schema_version": 1,
+      "task_type": "data_quality_audit",
+      "input_sha256": "04c01313af39b4adb5f0284b0f2149bd04bbca7c5cf7e75fef70ebee5bf76e75",
+      "rules": {
+        "required_values": [
+          "id",
+          "name"
+        ],
+        "duplicate_identifiers": "id",
+        "field_types": {
+          "score": "number"
+        },
+        "allowed_values": {
+          "tier": [
+            "standard",
+            "premium"
+          ]
+        },
+        "numeric_ranges": {
+          "score": {
+            "min": 0,
+            "max": 100
+          }
+        }
+      }
+    },
+    "run": {
+      "artifact_sha256": "da4ce5826dfe77832876b84192982100ba0e08e3f7b55e1f5632e8aa39145ad1",
+      "errors": [],
+      "finding_count": 6,
+      "inference": {
+        "generated_tokens": 36,
+        "model": "qwen2.5:3b",
+        "ollama_duration_ns": 7394116800,
+        "wall_ms": 7430
+      },
+      "input_rows": 3,
+      "input_sha256": "04c01313af39b4adb5f0284b0f2149bd04bbca7c5cf7e75fef70ebee5bf76e75",
+      "job_id": "02f5a01951e24e1ca0850f0a7170abe3",
+      "operations": [
+        "required_values",
+        "duplicate_identifiers",
+        "field_types",
+        "allowed_values",
+        "numeric_ranges"
+      ],
+      "output_rows": null,
+      "plan": {
+        "operations": [
+          "required_values",
+          "duplicate_identifiers",
+          "field_types",
+          "allowed_values",
+          "numeric_ranges"
+        ]
+      },
+      "records_audited": 3,
+      "rules_passed": false,
+      "status": "succeeded",
+      "task_type": "data_quality_audit"
+    },
+    "verified": {
+      "artifact_sha256": "da4ce5826dfe77832876b84192982100ba0e08e3f7b55e1f5632e8aa39145ad1",
+      "expected_sha256": "da4ce5826dfe77832876b84192982100ba0e08e3f7b55e1f5632e8aa39145ad1",
+      "job_id": "02f5a01951e24e1ca0850f0a7170abe3",
+      "mismatch": null,
+      "passed": true,
+      "specification_sha256": "f98f16a00160292c58482c49f49dbb48f6fb97c6847c0837af9b0aba7f30bf77",
+      "task_type": "data_quality_audit"
+    },
+    "rejected": {
+      "artifact_sha256": "cd3ba733aad8c5102d97ac2e04af2992e2f187114b3e238caa80f299faaa06ee",
+      "expected_sha256": "da4ce5826dfe77832876b84192982100ba0e08e3f7b55e1f5632e8aa39145ad1",
+      "job_id": "02f5a01951e24e1ca0850f0a7170abe3",
+      "mismatch": {
+        "actual_text": "0",
+        "expected_text": "6",
+        "kind": "json_mismatch",
+        "path": "$[\"finding_count\"]"
+      },
+      "passed": false,
+      "specification_sha256": "f98f16a00160292c58482c49f49dbb48f6fb97c6847c0837af9b0aba7f30bf77",
+      "task_type": "data_quality_audit"
+    }
+  }
+}

@@ -113,6 +113,7 @@ export function nearRoutes(db: DatabaseSync, config: NearConfig) {
     if (signer !== chain.roles[signerRole[method]]) throw new IntentError('Wrong signer for this action', 403);
     if ((scope === 'cleanup:0') !== (mode === 'cleanup')) throw new IntentError('Cleanup is scoped to job 0 only');
     const source = mode === 'cleanup' ? null : local(scope);
+    if (source?.run.task_type) throw new IntentError('Testnet intent preparation is available for CSV work orders only');
     const link = journal.link(scope);
     if (link && link.mode !== mode) throw new IntentError('Workflow mode cannot change after creation');
     const entries = journal.list(scope);

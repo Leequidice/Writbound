@@ -110,6 +110,12 @@ test('HTTP intent journal reconciles final creation, blocks duplicate hashes, an
       method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body),
     } : undefined);
     const prep = { scope: id, mode: 'success', method: 'create_job', signer: roles.customer };
+    const jsonId = '1123456789abcdef0123456789abcdef';
+    db.prepare("INSERT INTO jobs (id, customer_account_id, criteria_json, input_hash, local_run_json) VALUES (?, 'local', '{}', ?, ?)")
+      .run(jsonId, check.input_sha256, JSON.stringify({ task_type: 'json_transform', status: 'ready' }));
+    const blocked = await get('/prepare', { ...prep, scope: jsonId });
+    assert.equal(blocked.status, 409);
+    assert.match((await blocked.json()).error, /CSV work orders only/);
     assert.equal((await get('/prepare', { ...prep, signer: roles.worker })).status, 403);
     assert.equal((await get('/prepare', { ...prep, deposit: '1' })).status, 400);
     const response = await get('/prepare', prep);

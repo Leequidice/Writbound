@@ -5,6 +5,7 @@ import time
 import urllib.error
 import urllib.request
 
+from .json_tasks import parse_json
 from .spec import OPERATIONS, PLAN_SCHEMA
 
 
@@ -13,33 +14,40 @@ class NoRedirect(urllib.request.HTTPRedirectHandler):
         return None
 
 
-def validate_plan(plan: object, spec: dict) -> list[str]:
+def validate_plan(plan: object, spec: dict, allowed=OPERATIONS) -> list[str]:
     if not isinstance(plan, dict) or set(plan) != {"operations"}:
         raise ValueError("Model plan must contain only an operations array")
     operations = plan["operations"]
     if not isinstance(operations, list) or any(
-        not isinstance(op, str) or op not in OPERATIONS for op in operations
+        not isinstance(op, str) or op not in allowed for op in operations
     ):
         raise ValueError("Model plan includes an unsupported operation")
-    if operations != [op for op in OPERATIONS if spec[op]]:
+    if operations != [op for op in allowed if spec[op]]:
         raise ValueError("Model plan does not match the enabled operations and published order")
     return operations
 
 
-def plan_job(spec: dict, model: str) -> tuple[list[str], dict]:
+def plan_job(spec: dict, model: str, allowed=OPERATIONS, task="CSV cleanup") -> tuple[list[str], dict]:
     if not re.fullmatch(r"[A-Za-z0-9_.-]+:[A-Za-z0-9_.-]+", model) or len(model) > 80:
         raise ValueError("Use a local Ollama model name and tag")
-    settings = {op: bool(spec[op]) for op in OPERATIONS}
+    settings = {op: bool(spec[op]) for op in allowed}
+    schema = PLAN_SCHEMA if allowed == OPERATIONS else {
+        **PLAN_SCHEMA,
+        "properties": {"operations": {
+            **PLAN_SCHEMA["properties"]["operations"], "maxItems": len(allowed),
+            "items": {"type": "string", "enum": list(allowed)},
+        }},
+    }
     payload = {
         "model": model,
         "stream": False,
-        "format": PLAN_SCHEMA,
+        "format": schema,
         "options": {"temperature": 0, "num_ctx": 2048, "num_predict": 192},
         "messages": [
             {"role": "system", "content": (
-                "Plan a CSV cleanup. Return a JSON object with operations only. "
+                f"Plan a {task}. Return a JSON object with operations only. "
                 "Include every enabled operation once, omit disabled operations, and use this order: "
-                + ", ".join(OPERATIONS)
+                + ", ".join(allowed)
             )},
             {"role": "user", "content": json.dumps(settings)},
         ],
@@ -62,13 +70,16 @@ def plan_job(spec: dict, model: str) -> tuple[list[str], dict]:
     if len(raw) > 32768:
         raise ValueError("Ollama response exceeded the size limit")
     try:
-        result = json.loads(raw)
-        if result["done"] is not True or result["model"] != model or result.get("done_reason") == "length":
-            raise ValueError("Ollama returned an incomplete or unexpected model response")
-        plan = json.loads(result["message"]["content"])
-    except (KeyError, TypeError, UnicodeError, json.JSONDecodeError) as exc:
+        result = parse_json(raw)
+        content = result["message"]["content"]
+        if not isinstance(content, str):
+            raise TypeError("Model content must be a string")
+        plan = parse_json(content.encode("utf-8"))
+    except (KeyError, TypeError, ValueError) as exc:
         raise ValueError("Malformed Ollama response") from exc
-    operations = validate_plan(plan, spec)
+    if result.get("done") is not True or result.get("model") != model or result.get("done_reason") == "length":
+        raise ValueError("Ollama returned an incomplete or unexpected model response")
+    operations = validate_plan(plan, spec, allowed)
     return operations, {
         "model": result["model"],
         "wall_ms": round((time.monotonic() - start) * 1000),

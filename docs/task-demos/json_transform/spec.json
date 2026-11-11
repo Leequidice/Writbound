@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "task_type": "json_transform",
+  "input_sha256": "60c853b8058e2eaa591a77c40c5ac455bde08b4163f86bf083d423cdae6b91e8",
+  "rules": {
+    "rename_fields": {"userId":"id"},
+    "filter_records": {"field":"active","operator":"eq","value":true},
+    "normalize_strings": {"name":"trim_lower","team":"trim_lower"},
+    "fill_missing": {"team":"unassigned"},
+    "remove_fields": ["notes"],
+    "select_fields": ["id","name","team"]
+  }
+}

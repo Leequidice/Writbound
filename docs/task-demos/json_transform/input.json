@@ -1,0 +1,5 @@
+[
+  {"userId":"001","name":" ALICE ","active":true,"team":" Red ","notes":"internal"},
+  {"userId":"002","name":" Bob ","active":true,"team":null,"notes":"internal"},
+  {"userId":"003","name":" Chidi ","active":false,"team":"Blue","notes":"internal"}
+]

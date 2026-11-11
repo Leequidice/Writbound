@@ -1,0 +1,4 @@
+[
+  {"id":"001","name":"alice","team":"red"},
+  {"id":"002","name":"bob","team":null}
+]

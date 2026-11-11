@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "task_type": "data_quality_audit",
+  "input_sha256": "04c01313af39b4adb5f0284b0f2149bd04bbca7c5cf7e75fef70ebee5bf76e75",
+  "rules": {
+    "required_values": ["id","name"],
+    "duplicate_identifiers": "id",
+    "field_types": {"score":"number"},
+    "allowed_values": {"tier":["standard","premium"]},
+    "numeric_ranges": {"score":{"min":0,"max":100}}
+  }
+}

@@ -2,13 +2,13 @@
 
 **Autonomous work. Binding accountability.**
 
-AI agents can produce a deliverable quickly. Paying for that work still requires a way to check the result and resolve a dispute. Writbound combines an autonomous CSV worker, reproducible verification, and NEAR testnet escrow so a customer can trace an output from task specification to payout or refund.
+AI agents can produce a deliverable quickly. Paying for that work still requires a way to check the result and resolve a dispute. Writbound runs CSV cleaning, JSON transformation, and data quality audits locally with reproducible verification. Its historical CSV demonstration traces verified and challenged work through NEAR testnet escrow to payout and refund.
 
 ## How it works
 
-1. **Specify the work.** The customer provides a CSV and a versioned set of cleaning rules. The local API validates the input and hashes the exact source and specification bytes.
-2. **Run the worker.** Local Ollama `qwen2.5:3b` proposes a structured plan. Python validates it against the task and executes only the permitted CSV operations. The worker writes a canonical CSV and records its SHA-256.
-3. **Verify the result.** A separate deterministic implementation derives the expected output directly from the original input and specification. It compares exact bytes and reports the first mismatch. This check runs offchain.
+1. **Specify the work.** The customer provides a CSV or JSON dataset and versioned rules. The local API validates the input, hashes its bytes, and records a canonical specification hash.
+2. **Run the worker.** Local Ollama `qwen2.5:3b` proposes a structured plan. Python validates it and executes only permitted operations using the declared arguments. The worker writes the artifact and records its SHA-256.
+3. **Verify the result.** A separate deterministic implementation reconstructs the expected output from the original input and rules. It compares exact CSV bytes or canonical JSON content and reports the first mismatch. This check runs offchain.
 4. **Attest or challenge.** The designated verifier commits its verdict and evidence hash to NEAR. An eligible challenger can commit reproducible counterevidence before the challenge deadline. An upheld challenge can make the customer eligible for a refund.
 5. **Settle escrow.** The NEAR contract enforces signer roles, deadlines and transfer state. A verified job can pay the worker after its challenge window. A refundable job can return escrow to the customer. A successful finalized callback records the terminal state.
 
@@ -19,11 +19,11 @@ The model sees operation settings and returns a plan. The application controls p
 ```mermaid
 flowchart LR
     C[Customer] --> API[React dashboard and Express API]
-    API --> W[Local Ollama and Python CSV worker]
-    W --> A[Canonical CSV artifact and SHA-256]
+    API --> W[Local Ollama and restricted Python worker]
+    W --> A[CSV or JSON artifact and SHA-256]
     API --> V[Independent deterministic verifier]
     A --> V
-    API -->|Task commitment and funding via owner signer| N[NEAR testnet escrow]
+    API -->|CSV commitment and funding via owner signer| N[NEAR testnet escrow]
     V -->|Verdict and evidence hash via designated verifier| N
     Q[Independent challenger] -->|Counterevidence commitment| N
     N -->|Finalized callback| P[Worker payout]
@@ -40,6 +40,8 @@ flowchart LR
 ## Local setup on Windows
 
 Use PowerShell, Node.js 24.8 or later with npm, Python 3.13, and Ollama. Rust and Microsoft C++ Build Tools are needed only to test or build the contract. Install and start Ollama locally. [Ollama for Windows](https://docs.ollama.com/windows)
+
+Clone the repository and open its directory before running the commands below. Python installation must include the Windows `py` launcher. The initial npm, Python, and model downloads require internet access and local disk space. The worker's model request uses loopback only.
 
 From the project root:
 
@@ -63,13 +65,15 @@ Open the [local dashboard](http://127.0.0.1:5173). The API listens on [loopback 
 
 ## Run the demo
 
-In **Jobs**, choose **Create job from published demo CSV**. In **Worker**, run Ollama, verify the artifact and download the cleaned CSV. In **Challenges**, check the published defective fixture and inspect the missing-row evidence. In **Treasury**, open **Job 1 · Worker payout** and **Job 2 · Challenged refund** to read finalized chain state and view the published receipts.
+On **Overview**, choose a bundled demo. In **Worker**, run Ollama, download the artifact and verify it. In **Challenges**, check the defective fixture to reproduce the first mismatch. In **Treasury**, check finalized Jobs #1 and #2 to view the historical CSV settlement and refund receipts. [Task specifications and fixtures](docs/TASK_TYPES.md)
 
-Run the same local flow and read both existing onchain jobs from a third terminal:
+Run the CSV flow and read both existing onchain jobs from a third terminal:
 
 ```powershell
 node scripts/smoke-phase4.mjs
 ```
+
+For all three local task workflows, with the API and Ollama running, execute `node scripts/smoke-tasks.mjs`. Each run saves the real model plan, downloaded artifact, passing verification, and defective-artifact rejection under `data/task-smoke/`.
 
 The demo creates a fresh local job and reads existing chain state. The intentionally defective artifact omits `002,Bob,Unassigned`. Its positive onchain attestation was deliberately seeded to demonstrate a challenge against a trusted verifier's incorrect verdict. The independent verifier correctly rejects it.
 
@@ -88,7 +92,7 @@ Contract account `writbound-escrow-20261105.testnet`.
 
 ```powershell
 npm test
-node --test apps/web/test/workflow.test.ts
+node --test apps/web/test/*.test.ts
 $env:WRITBOUND_TEST_LIVE = '1'
 .venv/Scripts/python.exe -m unittest discover -s services/worker/tests -v
 npm run build
@@ -97,12 +101,12 @@ npm run test:smoke
 cargo test --locked --manifest-path contracts/writbound-escrow/Cargo.toml
 ```
 
-Set `WRITBOUND_TEST_LIVE` only when Ollama is running and the model is available. The contract test command runs locally. [Executed release checks](docs/RELEASE_AUDIT.md)
+Set `WRITBOUND_TEST_LIVE` only when Ollama is running and the model is available. The editable worker installation makes its Python package available to the test command. The contract test command runs locally. [Current release candidate checks](docs/RELEASE_CANDIDATE_010.md) · [Earlier release audit](docs/RELEASE_AUDIT.md)
 
 ## Security and limits
 
 - The deterministic verifier runs independently of the AI plan, but the contract trusts the designated verifier's verdict and challenge adjudication. Participants must be able to retrieve the committed artifacts and reports.
-- The API and dashboard are intended for a trusted local machine. CSV size and tool restrictions bound the demo workload. The application holds no signing keys and the release runners block broadcasting.
+- The API and dashboard are intended for a trusted local machine. Input sizes and tool restrictions bound the demo workload. The application holds no signing keys and the release runners block broadcasting.
 - The deployment is a hackathon testnet prototype. Free RPC availability, signer custody, and NEAR transfer/callback liveness remain operational dependencies. Job 0 remains open past its deadline with its original escrow.
 
 [Security model](docs/SECURITY_MODEL.md) · [Escrow state machine](docs/ESCROW_STATE_MACHINE.md) · [Worker and artifact format](docs/PHASE3_WORKER.md)

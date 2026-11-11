@@ -8,9 +8,9 @@ MAX_BYTES = 5 * 1024 * 1024
 MAX_ROWS = 100_000
 MAX_COLUMNS = 100
 
-def read_workspace_file(root: Path, filename: str, limit: int) -> bytes:
-    if not isinstance(filename, str) or not filename or '/' in filename or '\\' in filename or ':' in filename or Path(filename).name != filename or Path(filename).suffix.lower() != '.csv':
-        raise ValueError('Input must be a plain .csv filename')
+def read_workspace_file(root: Path, filename: str, limit: int, extension: str = '.csv') -> bytes:
+    if not isinstance(filename, str) or not filename or '/' in filename or '\\' in filename or ':' in filename or Path(filename).name != filename or Path(filename).suffix.lower() != extension:
+        raise ValueError(f'Input must be a plain {extension} filename')
     base = root.resolve(strict=True)
     path = base / filename
     if path.is_symlink() or path.resolve(strict=True).parent != base or not path.is_file():
@@ -18,7 +18,7 @@ def read_workspace_file(root: Path, filename: str, limit: int) -> bytes:
     with path.open('rb') as handle:
         data = handle.read(limit + 1)
     if len(data) > limit:
-        raise ValueError('CSV exceeds workspace byte limit')
+        raise ValueError(f'{extension[1:].upper()} exceeds workspace byte limit')
     return data
 
 def parse_csv(data: bytes) -> tuple[list[str], list[list[str]]]:

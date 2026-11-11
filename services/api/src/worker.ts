@@ -5,8 +5,11 @@ import { join, relative, resolve } from 'node:path';
 import type { DatabaseSync } from 'node:sqlite';
 import express, { type RequestHandler } from 'express';
 
-const maxCsvBytes = 5 * 1024 * 1024;
+const maxInputBytes = 5 * 1024 * 1024;
 const maxSpecBytes = 16 * 1024;
+const jsonTasks = ['json_transform', 'data_quality_audit'] as const;
+type JsonTask = (typeof jsonTasks)[number];
+const extension = (run: Run) => run.task_type ? 'json' : 'csv';
 export const localOnly: RequestHandler = (req, res, next) => {
   const origin = req.get('Origin');
   if (!['127.0.0.1', 'localhost'].includes(req.hostname)
@@ -26,6 +29,7 @@ export interface WorkerConfig {
 
 interface Run {
   status: 'ready' | 'running' | 'failed' | 'succeeded';
+  task_type?: JsonTask;
   specification_sha256: string;
   report?: Record<string, unknown>;
   verification?: string;
@@ -43,13 +47,13 @@ class RequestError extends Error {
   constructor(readonly status: number, message: string) { super(message); }
 }
 
-function decodeCsv(value: unknown): Buffer {
-  if (typeof value !== 'string' || value.length > 4 * Math.ceil(maxCsvBytes / 3)) {
-    throw new RequestError(400, 'Provide base64 CSV bytes up to 5 MiB');
+function decodeUpload(value: unknown): Buffer {
+  if (typeof value !== 'string' || value.length > 4 * Math.ceil(maxInputBytes / 3)) {
+    throw new RequestError(400, 'Provide base64 file bytes up to 5 MiB');
   }
   const data = Buffer.from(value, 'base64');
-  if (data.length > maxCsvBytes || data.toString('base64') !== value) {
-    throw new RequestError(400, 'Invalid or oversized base64 CSV');
+  if (data.length > maxInputBytes || data.toString('base64') !== value) {
+    throw new RequestError(400, 'Invalid or oversized base64 upload');
   }
   return data;
 }
@@ -145,17 +149,20 @@ export function workerRoutes(db: DatabaseSync, config: WorkerConfig) {
     }
     const spec = JSON.stringify(body.spec);
     if (Buffer.byteLength(spec) > maxSpecBytes) throw new RequestError(413, 'Specification exceeds 16 KiB');
-    const input = decodeCsv(body.input_base64);
+    const taskType = body.spec?.task_type as JsonTask | undefined;
+    if (taskType !== undefined && !jsonTasks.includes(taskType)) throw new RequestError(422, 'Unsupported task type');
+    const input = decodeUpload(body.input_base64);
     const id = randomUUID().replaceAll('-', '');
     const directory = join(root, id);
     mkdirSync(directory, { mode: 0o700 });
-    const inputPath = join(directory, 'input.csv');
+    const inputPath = join(directory, taskType ? 'input.json' : 'input.csv');
     let created = false;
     try {
       writeFileSync(inputPath, input, { flag: 'wx', mode: 0o600 });
       const result = await runPython(config, 'validate', workspace(id), id, spec);
       if (!result.ok) { res.status(422).json(result.data); return; }
       const run: Run = { status: 'ready', specification_sha256: String(result.data.specification_sha256) };
+      if (taskType) run.task_type = taskType;
       const hash = createHash('sha256').update(input).digest('hex');
       db.prepare(`INSERT INTO jobs (id, customer_account_id, criteria_json, input_hash, local_run_json)
         VALUES (?, 'local', ?, ?, ?)`).run(id, spec, hash, JSON.stringify(run));
@@ -169,11 +176,27 @@ export function workerRoutes(db: DatabaseSync, config: WorkerConfig) {
     }
   }));
 
+  router.get('/demo/:task', (req, res, next) => {
+    const task = req.params.task as JsonTask;
+    if (!jsonTasks.includes(task)) { res.status(404).json({ error: 'Unknown demo task' }); return; }
+    try {
+      const directory = join(config.projectRoot, 'docs', 'task-demos', task);
+      const input = readFileSync(join(directory, 'input.json'));
+      const defective = readFileSync(join(directory, 'defective.json'));
+      const spec = JSON.parse(readFileSync(join(directory, 'spec.json'), 'utf8'));
+      if (spec.task_type !== task || spec.input_sha256 !== createHash('sha256').update(input).digest('hex')) {
+        throw new Error('Demo input and specification do not match');
+      }
+      res.json({ spec, input_base64: input.toString('base64'), defective_base64: defective.toString('base64') });
+    } catch (error) { next(error); }
+  });
+
   router.get('/:id', (_req, res) => {
     const job: LocalJob = res.locals.job;
     const run: Run = res.locals.run;
     res.json({
       id: job.id, spec: JSON.parse(job.criteria_json), input_sha256: job.input_hash,
+      task_type: run.task_type,
       specification_sha256: run.specification_sha256, status: run.status, report: run.report ?? null,
       verification: run.verification ? JSON.parse(run.verification) : null,
       challenge_available: Boolean(run.challenge),
@@ -203,12 +226,13 @@ export function workerRoutes(db: DatabaseSync, config: WorkerConfig) {
     const run: Run = res.locals.run;
     if (run.status !== 'succeeded') { res.status(404).json({ error: 'Artifact unavailable' }); return; }
     try {
-      const path = join(workspace(job.id), 'artifact.csv');
+      const format = extension(run);
+      const path = join(workspace(job.id), 'artifact.' + format);
       const stat = lstatSync(path);
-      if (!stat.isFile() || stat.isSymbolicLink() || stat.size > maxCsvBytes) throw new Error('Invalid artifact file');
+      if (!stat.isFile() || stat.isSymbolicLink() || stat.size > maxInputBytes) throw new Error('Invalid artifact file');
       const artifact = readFileSync(path);
       if (createHash('sha256').update(artifact).digest('hex') !== run.report?.artifact_sha256) throw new Error('Artifact integrity failure');
-      res.attachment('artifact.csv').type('text/csv').send(artifact);
+      res.attachment('artifact.' + format).type(format === 'csv' ? 'text/csv' : 'application/json').send(artifact);
     } catch (error) { next(error); }
   });
 
@@ -222,8 +246,8 @@ export function workerRoutes(db: DatabaseSync, config: WorkerConfig) {
     if (fields.length && (fields.length !== 1 || fields[0] !== 'artifact_base64')) {
       throw new RequestError(400, 'Expected no body or artifact_base64');
     }
-    const candidate = fields.length ? decodeCsv(body.artifact_base64) : null;
-    const path = join(directory, 'candidate.csv');
+    const candidate = fields.length ? decodeUpload(body.artifact_base64) : null;
+    const path = join(directory, 'candidate.' + extension(run));
     if (candidate) {
       try { unlinkSync(path); } catch (error) {
         if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
