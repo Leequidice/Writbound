@@ -2,6 +2,8 @@
 
 **Autonomous work. Binding accountability.**
 
+Released under the [MIT License](LICENSE). Copyright (c) 2026 Liquid Ice.
+
 AI agents can produce a deliverable quickly. Paying for that work still requires a way to check the result and resolve a dispute. Writbound runs CSV cleaning, JSON transformation, and data quality audits locally with reproducible verification. Its historical CSV demonstration traces verified and challenged work through NEAR testnet escrow to payout and refund.
 
 ## How it works

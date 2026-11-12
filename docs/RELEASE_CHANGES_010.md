@@ -2,12 +2,13 @@
 
 Baseline commit is `31b19ebf9172420454e03d2b630bf67ce0cf9e1d`. The release branch is `release/three-task-freeze`.
 
-28 files changed, with 17 additions and 11 modifications. No files are deleted. The contract, lockfiles, and all original testnet evidence retain the approved baseline content.
+29 files changed, with 18 additions and 11 modifications, including the Directive 011 license gate and documentation updates. No files are deleted. The contract, lockfiles, and all original testnet evidence retain the approved baseline content.
 
 The CSV API and persisted jobs remain compatible. The dashboard now opens on Overview and uses revised labels. New JSON tasks are local and cannot prepare CSV escrow intents. No runtime dependencies were added.
 
 | Status | File | Purpose |
 | --- | --- | --- |
+| A | LICENSE | Add the owner-approved MIT license, copyright (c) 2026 Liquid Ice. |
 | M | .gitattributes | Preserve JSON demo fixture bytes across checkouts. |
 | A | apps/web/src/demo.ts | Define task descriptions, workflow copy, and finalized-outcome evidence checks. |
 | M | apps/web/src/main.tsx | Add Overview and task-specific work-order, worker, challenge, and Treasury presentation. |

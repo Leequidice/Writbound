@@ -2,7 +2,7 @@
 
 **Autonomous work. Binding accountability.**
 
-This draft describes the frozen three-task release candidate. The public repository currently points to the earlier approved release, `31b19ebf9172420454e03d2b630bf67ce0cf9e1d`. Publish the candidate only after owner authorization. Record its exact commit from the release handoff when updating the submission.
+This draft describes the owner-approved three-task release based on `ec0e752d5938b9c4abf48f3e54ef9cb20ea4c313`, with the approved MIT license, copyright (c) 2026 Liquid Ice. The final published commit is recorded in the engineering handoff. Video publication and hackathon submission require separate owner authorization.
 
 ## Submission fields
 
@@ -84,12 +84,10 @@ Title — Writbound | Three Verifiable AI Workflows and NEAR Escrow Evidence
 
 Suggested visibility — Unlisted, followed by a signed-out playback check after an authorized upload.
 
-Description — Writbound runs CSV cleaning, JSON transformation, and data quality audits with local Ollama planning, restricted execution, and independent deterministic verification. The historical NEAR testnet CSV workflows show a finalized worker payout and challenged refund. The defective-work positive attestation was deliberately seeded, and the offchain verifier remains trusted. Source and setup are at https://github.com/Leequidice/Writbound. The three-task release and video publication require owner authorization.
+Description — Writbound runs CSV cleaning, JSON transformation, and data quality audits with local Ollama planning, restricted execution, and independent deterministic verification. The historical NEAR testnet CSV workflows show a finalized worker payout and challenged refund. The defective-work positive attestation was deliberately seeded, and the offchain verifier remains trusted. Source and setup are at https://github.com/Leequidice/Writbound.
 
 ## Remaining submission steps
 
-- Approve the release candidate and authorize its GitHub push.
-- Choose a license and confirm the copyright holder. MIT is recommended, pending approval. [MIT license](https://opensource.org/license/mit)
 - Record and review the new video, then authorize publication and provide the actual X permalink.
 - Confirm team lead, email, team size, tracks, public prize account, and consent.
 - If submitting another independent project, confirm and add the organizer-required cross-project disclosure to each README. [Organizer rules](https://nearhackathon.com/HACKATHON.md)
